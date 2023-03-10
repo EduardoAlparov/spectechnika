@@ -1,0 +1,14 @@
+.modal__container(data-target="error-popup")
+	.modal__content
+		button.button-reset.modal__close-btn.modal-close(type="button")
+			+icon-mono('delete')
+		.modal__response
+			.modal__status-icon
+				+icon-multi('union-red')
+			.modal__response-body
+				h4.h4-text
+					| Заявка не отправлена
+				p 
+					| Произошла ошибка, пожалуйста,<br> повторите&nbsp;запрос
+			a.modal__link.button-primary.button-primary--medium(href="/")
+				| повторить

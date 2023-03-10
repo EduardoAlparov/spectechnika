@@ -1,0 +1,160 @@
+.range {
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 10rem;
+    padding: 0.8rem 1.6rem 3rem 1.6rem;
+    background-color: var(--color-white);
+    border-radius: 0.8rem;
+    color: var(--color-grayscale-900);
+
+    @include mq(sm, max) {
+      height: 65px;
+      padding: 8px 16px 18px 16px;
+    }
+  }
+
+  &__label {
+    font-size: 1.4rem;
+    line-height: 120%;
+    color: var(--color-grayscale-700);
+
+    @include mq(sm, max) {
+      font-size: 12px;
+    }
+  }
+
+  &__values {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+
+    @include mq(sm, max) {
+      font-size: 16px;
+    }
+  }
+
+  &__input-percentege {
+    pointer-events: none;
+  }
+
+  &__input-wrapper {
+    position: absolute;
+    bottom: -3px;
+    left: 2px;
+    z-index: 3;
+    width: calc(100% - 5px);
+
+    @include mq(sm, max) {
+      width: 175px;
+    }
+  }
+}
+/*generated with Input range slider CSS style generator (version 20211225)
+https://toughengineer.github.io/demo/slider-styler*/
+input[type=range].styled-slider {
+  height: 2px;
+  -webkit-appearance: none;
+}
+
+/*progress support*/
+input[type=range].styled-slider.slider-progress {
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--value) - var(--min)) / var(--range));
+  --sx: calc(0.5 * 13px + var(--ratio) * (100% - 13px));
+}
+
+input[type=range].styled-slider:focus {
+  outline: none;
+}
+
+/*webkit*/
+input[type=range].styled-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 1em;
+  background: #161617;;
+  border: none;
+  box-shadow: 0 0  #FFFFFF;
+  margin-top: calc(2px * 0.5 - 13px * 0.5);
+}
+
+input[type=range].styled-slider::-webkit-slider-runnable-track {
+  height: 2px;
+  border: none;
+  border-radius: 0.5em;
+  background: transparent;
+  box-shadow: none;
+}
+
+input[type=range].styled-slider.slider-progress::-webkit-slider-runnable-track {
+  background: linear-gradient(#161617,#161617) 0/var(--sx) 100% no-repeat, transparent;
+}
+
+/*mozilla*/
+input[type=range].styled-slider::-moz-range-thumb {
+  width: 13px;
+  height: 13px;
+  border-radius: 1em;
+  background: #161617;;
+  border: none;
+  box-shadow: 0 0  #FFFFFF;
+}
+
+input[type=range].styled-slider::-moz-range-track {
+  height: 2px;
+  border: none;
+  border-radius: 0.5em;
+  background: transparent;
+  box-shadow: none;
+}
+
+input[type=range].styled-slider.slider-progress::-moz-range-track {
+  background: linear-gradient(#161617,#161617) 0/var(--sx) 100% no-repeat, transparent;
+}
+
+/*ms*/
+input[type=range].styled-slider::-ms-fill-upper {
+  background: transparent;
+  border-color: transparent;
+}
+
+input[type=range].styled-slider::-ms-fill-lower {
+  background: transparent;
+  border-color: transparent;
+}
+
+input[type=range].styled-slider::-ms-thumb {
+  width: 13px;
+  height: 13px;
+  border-radius: 1em;
+  background: #161617;;
+  border: none;
+  box-shadow: 0 0  #FFFFFF;
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
+input[type=range].styled-slider::-ms-track {
+  height: 2px;
+  border-radius: 0.5em;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+input[type=range].styled-slider.slider-progress::-ms-fill-lower {
+  height: 2px;
+  border-radius: 0.5em 0 0 0.5em;
+  margin: -undefined 0 -undefined -undefined;
+  background: #161617;
+  border: none;
+  border-right-width: 0;
+}

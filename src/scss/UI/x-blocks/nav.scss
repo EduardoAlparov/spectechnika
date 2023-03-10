@@ -1,0 +1,64 @@
+.nav {
+  $component: &;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3.6rem;
+
+    @include mq(xl, max) {
+      gap: 2.4rem;
+    }
+  }
+
+  &--vert {
+    #{$component}__list {
+      align-items: baseline;
+      flex-direction: column;
+      gap: 0.5rem;
+      flex-wrap: nowrap;
+
+      @include mq(xl, max) {
+        column-gap: 2rem;
+        row-gap: 9px;
+      }
+
+      @include mq(sm, max) {
+        flex-direction: column;
+        flex-wrap: nowrap;
+      }
+     }
+
+    #{$component}__link {
+      @include mq(xl, max) {
+        font-size: 1.6rem;
+      }
+
+      @include mq(sm, max) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__link--large {
+    font-size: 2.4rem;
+    line-height: 110%;
+
+    @include mq(md, max) {
+      font-size: 1.8rem;
+    }
+
+    @include mq(xxs, max) {
+      font-size: 14px;
+    }
+  }
+}
+
+.header--simple {
+  .nav {
+    &__list {
+      gap: 2.8rem;
+    }
+  }
+}

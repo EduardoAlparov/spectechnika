@@ -1,0 +1,38 @@
+section.section.offers.section--black
+  .section__title.visually-hidden
+    | section title
+
+  .site-container
+    .slider-layout
+      .slider-layout__title.h2-text.h2-text--inherit-color
+        | Акции и предложения
+
+      .slider-layout__body
+
+        .slider-layout__sidebar
+          .link-tip
+            .link-tip__head
+              .link-tip__text
+                | Поддержиаем репутацию среди
+                | наших клиентов на высоком уровне
+
+          .slider-layout__controls
+            .button-slider-wrapper
+              button.button-slider.button-slider--left.offers__button.offers__button--prev(type="button")
+                +icon-mono('v-arrow-l')
+              button.button-slider.button-slider--rigth.offers__button.offers__button--next(type="button")
+                +icon-mono('v-arrow-r')
+
+        .slider-layout__main
+          .slider-layout__slider-wrapper.offers__outer-wrapper
+            .slider-layout__slider.offers__slider.swiper.js-swiper-offers
+              .slider-layout__list.offers__list.swiper-wrapper
+                .slider-layout__item.swiper-slide
+                  .link-card
+                    .link-card__body
+                      .link-card__image
+                        +pictureLazy('cards/img-2.jpg', 'акции производителя "СпецТехника"')
+                      .link-card__info
+                        a.link-card__title(href="#")
+                          | Скидка 20% на покупку больше&nbsp;
+                          | одного грузового автомобиля КАМАЗ

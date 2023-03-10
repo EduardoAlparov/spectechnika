@@ -1,0 +1,40 @@
+/* stylelint-disable no-invalid-position-at-import-rule */
+:root {
+  /* typography  */
+  --main-ff: "Onest", sans-serif;
+  --second-ff: "Arial", sans-serif;
+
+  /* colors */
+  --color-primary-500: #3300ff;
+  --color-primary-900: #2300b0;
+  --color-grayscale-900: #161617;
+  --color-grayscale-700: #7a7a7a;
+  --color-grayscale-400: #a4a4a4;
+  --color-grayscale-300: #dedfe1;
+  --color-grayscale-200: #f1f1f2;
+  --color-grayscale-100: #f5f5f6;
+  --color-dark: #333;
+  --color-bg: #e4e4e4;
+  --color-white: #ffffff;
+  --color-black: #000;
+  --color-other: rgba(245, 245, 246, 0.4);
+  --color-grey-900: #444448;
+  --color-grey-600: #99a5b0;
+  --color-grey-300: #efefef;
+  --color-grey: #cccccc;
+  --font-body: 400 1.8rem/1.39 var(--main-ff);
+
+  /* etc */
+  --transition: 200ms ease-in;
+  // test
+}
+
+@import "./helpers/**/*";
+@import "./vendor/**/*";
+@import "./settings/**/*";
+@import "./UI/**/*";
+@import "./pages/**/*";
+@import "../../node_modules/swiper/swiper.scss";
+@import "../../node_modules/swiper/components/effect-fade/effect-fade.scss";
+@import "../../node_modules/@fancyapps/ui/src/Fancybox/Fancybox.scss";
+@import "../../node_modules/plyr/src/sass/plyr.scss";

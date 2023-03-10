@@ -1,0 +1,77 @@
+.button-nav {
+  padding: 12.5px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;;
+  border: 1px solid var(--color-white);
+  border-radius: 0.6rem;
+  cursor: pointer;
+
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .icon-closing {
+    width: 25px;
+    height: 25px;
+    display: none;
+    stroke: var(--color-white);
+  }
+}
+
+
+.disable-scroll {
+  .header {
+    .button-nav {
+      pointer-events: none;
+    }
+  }
+
+  &.disable-scroll--with-menu {
+    .button-nav--abs {
+      position: fixed;
+      z-index: 100;
+      opacity: 1;
+      visibility: visible;
+      
+      .icon {
+        &:last-child {
+          display: none;
+        }
+      }
+  
+      @include mq(sm, max) {
+        background-color: white;
+  
+        .icon {
+          &:first-child {
+            display: none;
+          }
+  
+          &:last-child {
+            display: block;
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  @include mq(sm, max) {
+    .button-nav {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.nav-popup {
+  .button-nav--abs {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

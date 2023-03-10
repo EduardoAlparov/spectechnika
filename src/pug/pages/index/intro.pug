@@ -1,0 +1,89 @@
+section.intro
+  .section__title.visually-hidden
+    | section main title
+
+  .intro__gallery.js-swiper-album
+    .main-gallery.swiper-wrapper
+      .main-gallery__item.swiper-slide
+        +picture('intro/img-1.jpg', '"СпецТехника" — дилер ведущих производителей')
+      .main-gallery__item.swiper-slide
+        +picture('intro/img-2.jpg', '"СпецТехника" — дилер ведущих производителей')
+
+  .intro__slider.main-slider.js-swiper-main
+    .main-slider__wrapper.swiper-wrapper
+      .main-slider__slide.main-slide.swiper-slide
+        .site-container
+          .main-slide__body
+            .main-slide__salutation
+              .main-slide__slogan
+                | Горячее&nbsp;
+                br
+                | предложение!
+
+            a.main-slide__link(href="#")
+              .main-slide__info
+                .main-slide__title.h4-text
+                  | Скидка 20% на Камаз 4308&nbsp;
+                  br
+                  | весь октябрь
+                .main-slide__features
+                  .main-slide__feature
+                    ._feature-name
+                      | Максимальная масса автомобиля
+                    ._feature-value
+                      | 11 990 кг
+                  .main-slide__feature
+                    ._feature-name
+                      | Мощность двигателя
+                    ._feature-value
+                      | 250 л.с.
+              .main-slide__image
+                .main-slide__pic
+                  +picture('tech-models/image-1.jpg', 'Спецтехника Камаз 4308')
+                .main-slide__button
+                  span._circle-wrapper
+                    span._circle
+                    +icon-mono('arrow-r')
+                    +icon-mono('arrow-rmob')
+      .main-slider__slide.main-slide.swiper-slide
+        .site-container
+          .main-slide__body
+            .main-slide__salutation
+               .main-slide__slogan
+                | Горячее&nbsp;
+                br
+                | предложение!
+
+            a.main-slide__link(href="#")
+              .main-slide__info
+                .main-slide__title.h4-text
+                  | Скидка 20% на Камаз 4308&nbsp;
+                  br
+                  | весь октябрь
+                .main-slide__features
+                  .main-slide__feature
+                    ._feature-name
+                      | Максимальная масса автомобиля
+                    ._feature-value
+                      | 11 990 кг
+                  .main-slide__feature
+                    ._feature-name
+                      | Мощность двигателя
+                    ._feature-value
+                      | 250 л.с.
+              .main-slide__image
+                .main-slide__pic
+                  +picture('tech-models/img-2.jpg', 'Спецтехника Камаз 4308')
+                .main-slide__button
+                  span._circle-wrapper
+                    span._circle
+                    +icon-mono('arrow-r')
+                    +icon-mono('arrow-rmob')
+
+    .main-slider__navigation
+      .site-container
+        .button-slider-wrapper
+          button.button-slider.button-slider--left.main-slider__button.main-slider__button--prev(type="button")
+            +icon-mono('v-arrow-l')
+          button.button-slider.button-slider--rigth.main-slider__button.main-slider__button--next(type="button")
+            +icon-mono('v-arrow-r')

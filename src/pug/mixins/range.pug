@@ -1,0 +1,35 @@
+mixin Range(label, currency, name, minValue=0, maxValue=100, percentevisible= false)
+  .range
+    .range__wrapper
+      .range__label= label
+
+      .range__input-wrapper
+        input.range__input.styled-slider.slider-progress(
+          type="range",
+          required,
+          name= name,
+          id= name + 'Input',
+          min= minValue,
+          max= maxValue,
+          value= maxValue
+        )
+
+      .range__values
+        .range__input-value
+          output(
+            for= name,
+            id= name + 'Output',
+
+          )= maxValue.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ')
+          span
+            | &nbsp;
+          span.range__span-currency= currency
+
+        if percentevisible
+          .range__input-percentege
+            span.range__percentege-value
+              | 100
+            span
+              | &nbsp;
+            span.range__percentege-currency
+              | &#x25;

@@ -1,0 +1,43 @@
+.button-text {
+  display: block;
+  font-weight: 500;
+  font-size: 4.4rem;
+  line-height: 100%;
+  cursor: pointer;
+  color: var(--color-grey);
+  transition: color var(--transition);
+
+  & ~ span {
+    color: var(--color-grey);
+    transition: color var(--transition);
+  }
+
+  @include hover {
+    color: var(--color-primary-500);
+
+    & ~ span {
+      color: var(--color-primary-500);
+    }
+  }
+
+  &._active {
+    color: var(--color-grayscale-900);
+    pointer-events: none;
+  }
+
+  &._active ~ span {
+    color: var(--color-grayscale-900);
+  }
+
+  @include mq(xl, max) {
+    font-size: 3.6rem;
+  }
+
+  @include mq(lg, max) {
+    font-size: 2.4rem;
+  }
+
+  @include mq(sm, max) {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,18 @@
+.site-container
+  .modal__container.modal__container--search(data-target="search-popup")
+    .modal__content
+      button.button-reset.modal__close-btn.modal-close.visually-hidden(type="button")
+        +icon-mono('delete')
+
+      form.modal__searchbar.searchbar
+        input.searchbar__input(
+          type="text",
+          name="search",
+          autocomplete="off",
+          spellcheck="false",
+          autocorrect="off",
+          required,
+          id="search-input"
+        )
+        button.searchbar__button(type="submit")
+          | НАйти

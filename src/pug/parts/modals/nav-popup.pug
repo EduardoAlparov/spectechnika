@@ -1,0 +1,37 @@
+.site-container
+	.modal__container.modal__container--nav(data-target="nav-popup")
+		.modal__content
+			button.button-reset.modal__close-btn.modal-close.visually-hidden(type="button")
+				+icon-mono('delete')
+
+			.modal__nav-popup.nav-popup
+				.nav-popup__body
+					ul.nav-popup__list 
+						each url, title in navLinks
+							li.nav-popup__item
+								a.nav-popup__link.primary-link(href=url)
+									span.link-text= title
+
+					.nav-popup__contacts
+						.nav-popup__phone
+							.nav-popup__label 
+								| По всем вопросам
+							a.nav-popup__number.primary-link(href="tel:8 800 550 58 12")
+								span.link-text
+									| 8 800 550 58 12
+
+						.nav-popup__address
+							| г. Набережные Челны,
+							br
+							| Транспортный проезд, 2
+
+					.nav-popup__buttons   
+						button.product-card__button.nav-popup__button.nav-popup__button--compare
+							+icon-multi('comparison')
+							span
+								| сравнение
+
+						button.product-card__button.nav-popup__button.nav-popup__button--search.modal-close
+							+icon-mono('search')
+							span
+								| поиск

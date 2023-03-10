@@ -1,0 +1,128 @@
+.link-card {
+  width: 52rem;
+  display: block;
+
+  @include mq(xl, max) {
+    width: 36rem;
+  }
+
+  @include mq(md, max) {
+    width: 277px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+
+    @include mq(md, max) {
+      gap: 19px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 36.2rem;
+
+    border-radius: 1.2rem;
+    overflow: hidden;
+
+    @include mq(xl, max) {
+      height: 24rem;
+    }
+
+    @include mq(md, max) {
+      height: 192px;
+    }
+
+    img {
+      min-height: 100%;
+      min-width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    &--video {
+      position: relative;
+
+      height: 32.1rem;
+
+      a {
+        position: absolute;
+        left: 1.9rem;
+        bottom: 2rem;
+
+        @include mq(md, max) {
+          left: 13px;
+          bottom: 13px;
+        }
+      }
+
+      @include mq(xl, max) {
+        height: 21.4rem;
+      }
+
+      @include mq(md, max) {
+        height: 172px;
+        margin-bottom: 7px;
+      }
+    }
+  }
+
+  &__info {
+    padding-bottom: 0.2rem;
+  }
+
+  &__title {
+    position: relative;
+    display: inline;
+    height: auto;
+    width: auto;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 110%;
+    text-decoration: none;
+    background: linear-gradient(#fff,#fff) left bottom no-repeat;
+    background-size: 0% 0.1rem;
+    background-repeat: no-repeat;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    transition: all 0.5s;
+
+    &--white {
+      background: linear-gradient(#161617,#161617) left bottom no-repeat;
+      background-size: 0% 0.1rem;
+    }
+
+    @include hover {
+      background-size: 100% 0.1rem;
+    }
+
+    @include mq(md, max) {
+      font-size: 18px;
+
+      br {
+        display: none;
+      }
+    }
+
+    @include mq(sm, max) {
+      display: inline;
+
+      .link-text  {
+        display: inline;
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 1.6rem;
+    font-size: 1.8rem;
+    line-height: 110%;
+    color: var(--color-grayscale-700);
+
+    @include mq(md, max) {
+      font-size: 16px;
+    }
+  }
+}

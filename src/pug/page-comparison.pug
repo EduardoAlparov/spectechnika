@@ -1,0 +1,10 @@
+extends layout/default.pug
+
+block variables
+  - const bodyClass = "page-comparison"
+  - const headerClass = "header header--simple"
+  - const pageTitle = "Сравнение"
+  - const siteLang = "ru"
+
+block content
+  include pages/comparison/main.pug

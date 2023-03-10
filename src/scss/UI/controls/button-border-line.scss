@@ -1,0 +1,43 @@
+.button-border-line{
+  font-size: 2.5rem;
+  line-height: 1.1;
+  border: 0.1rem solid var(--color-grayscale-900);
+  padding: 2.4rem;
+  width: 100%;
+  border-radius: 0.6rem;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  transition: background-color color var(--transition);
+  cursor: pointer;
+
+  @include mq(sm) {
+    font-size: 1.4rem;
+    padding: 1.25rem;
+  }
+
+  @include mq(sm, min) {
+    &:hover{
+      background-color: var(--color-grayscale-900);
+      color: var(--color-grayscale-100);
+
+      span{
+        color: var(--color-grayscale-100);
+      }
+    }
+  }
+
+  &.hide{
+    .default-label{
+      display: none;
+    }
+    .active-label{
+      display: block;
+    }
+  }
+
+  .active-label{
+    display: none;
+  }
+}

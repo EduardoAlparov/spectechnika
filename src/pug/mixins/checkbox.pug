@@ -1,0 +1,13 @@
+mixin Checkbox(title, name, inputId, check)
+  .checkbox
+    .checkbox__title= title
+    .checkbox__wrapper
+      input.checkbox__input(
+        hidden
+        type="checkbox",
+        name= name,
+        id= inputId
+        checked= check
+      )
+      label.checkbox__button(for= name)
+        .checkbox__switch

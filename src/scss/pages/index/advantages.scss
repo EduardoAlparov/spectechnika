@@ -1,0 +1,172 @@
+.advantages {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--color-primary-500);
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-image: url('../../assets/images/advant/pattern.svg');
+    background-position: right top;
+    background-repeat: space;
+    z-index: 1;
+  }
+
+  @include mq(md, max) {
+    min-height: unset;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    margin-left: auto;
+    padding-top: 16.2rem;
+    padding-bottom: 14.2rem;
+    padding-left: 1rem;
+
+    @include mq(xl, max) {
+      width: 70%;
+    }
+
+    @include mq(lg, max) {
+      padding-top: 8.1rem;
+      padding-bottom: 7.1rem;
+      margin-right: auto;
+    }
+
+    @include mq(md, max) {
+      width: 100%;
+      padding-left: 0;
+      padding-top: 48px;
+      padding-bottom: 75px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 6.5rem;
+
+    font-size: 6rem;
+    line-height: 100%;
+    color: #FFFFFF;
+
+    transform: translateY(20%);
+    transition: 1.2s ease-out;
+
+    @include mq(lg, max) {
+      font-size: 5rem;
+      text-align: center;
+    }
+
+    @include mq(md, max) {
+      font-size: 4rem;
+      margin-bottom: 30px;
+    }
+
+    @include mq(sm, max) {
+      font-size: 24px;
+      text-align: left;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6.4rem 4rem;
+
+    @include mq(lg, max) {
+      justify-content: space-between;
+      gap: 3.2rem 2rem;
+    }
+
+    @include mq(sm, max) {
+      gap: 12px 2px;
+    }
+  }
+
+  &__item {
+    flex: 0 0 calc(100% / 3 - 3.5rem);
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    @include mq(sm, max) {
+      flex: 0 0 calc(100% / 2 - 12px);
+      gap: 8px;
+    }
+  }
+
+  &__icon {
+    max-width: 8.5rem;
+    max-height: 8.7rem;
+    min-width: 8.5rem;
+    min-height: 8.7rem;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @include mq(sm, max) {
+      max-width: 48px;
+      max-height: 50px;
+      min-width: 48px;
+      min-height: 50px;
+    }
+  }
+
+  &__text {
+    line-height: 110%;
+    color: #fff;
+
+    @include mq(sm, max) {
+      font-size: 14px;
+      line-height: 120%;
+    }
+  }
+
+  &__picture-decore {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 40%;
+    height: 50%;
+    transform: translateX(-10%);
+    transition: 1.2s ease-out;
+
+    img {
+      height: 100%;
+      object-fit: contain;
+      object-position: top;
+    }
+
+    @include mq(xl, max) {
+      width: 30%;
+      height: auto;
+    }
+
+    @include mq(lg, max) {
+      display: none;
+    }
+  }
+
+  &._animate {
+    .advantages__picture-decore {
+      transform: translateX(0%);
+    }
+    .advantages__title {
+      transform: translateY(0%);
+    }
+  }
+}

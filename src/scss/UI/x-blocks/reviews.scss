@@ -1,0 +1,32 @@
+.reviews {
+  margin-bottom: 8rem !important;
+
+  @include mq(sm, max) {
+    margin-bottom: 60px !important;
+  }
+
+  &--bg-grey{
+    background-color: var(--color-grayscale-200);
+    padding: 12rem 0 12rem;
+    margin-bottom: 0 !important;
+
+    @include mq(lg) {
+      padding: 9rem 0 8rem;
+    }
+
+    @include mq(sm) {
+      padding: 6rem 0;
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+.white-section {
+  .reviews {
+    margin-bottom: 0rem !important;
+
+    @include mq(sm, max) {
+      margin-bottom: 0 !important;
+    }
+  }
+}

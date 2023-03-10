@@ -1,0 +1,63 @@
+.modal__container(data-target="callback-modal")
+  .modal__content
+    button.button-reset.modal__close-btn.modal-close(type="button")
+      +icon-mono('delete')
+
+    form.modal__form.form(action="")
+      .form__body
+        .form__heading
+          .form__titles
+            h3.form__title.h4-text
+              | Заказать&nbsp;
+              br
+              | обратный звонок
+            .form__text
+              | Наш менеджер свяжется с Вами в&nbsp;ближайшее время!
+          .form__contacts 
+            .form__image 
+              +icon-multi('phone_incoming')
+
+        .form__controls
+          .form__inputs
+            .form__input-wrapper
+              input.form__input.input.input--dark.js-input-mask_text(
+                type="text",
+                placeholder="Ваше имя",
+                name="name"
+                required
+              )
+            .form__input-wrapper
+              input.form__input.input.input--dark.js-input-mask_phone(
+                type="text",
+                placeholder="Телефон",
+                name="phone"
+                required
+              )
+            .form__input-wrapper
+              input.form__input.input.input--dark(
+                type="text",
+                placeholder="Комментарий",
+                name="comment"
+                required
+              )
+          .form__submit
+            button.button-primary.button-primary--large.js-modal-submit(
+              data-path="error-popup"
+              type="submit",
+            )
+              | Оставить заявку
+            .form__submit-text
+              span
+                | Нажимая кнопку “Оставить заявку” вы соглашаетесь с&nbsp;
+              a(href="")
+                |политикой конфиденциальности
+        .form__contacts 
+          .nav-popup__phone
+            .nav-popup__label 
+              | Отдел продаж
+            a.nav-popup__number.primary-link(href="tel:8 800 550 58 12")
+              span.link-text
+              | +7 800 550 58 12
+            a.nav-popup__mail.primary-link(href="mailto:1@teh-spec.ru")
+              span.link-text
+              | 1@teh-spec.ru

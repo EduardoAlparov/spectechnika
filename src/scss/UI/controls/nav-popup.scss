@@ -1,0 +1,139 @@
+.nav-popup {
+	height: 100%;
+
+	@include mq(sm, max) {
+		width: 100%;
+		display: flex;
+	}
+
+	&__wrapper {
+		height: 100%;
+		width: 100%;
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 4.8rem;
+
+		@include mq(sm, max) {
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			flex-grow: 1;
+			max-width: unset;
+			border-radius: 0;
+			box-shadow: unset;
+    }
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+
+    @include mq(sm, max) {
+      padding-top: 4.5rem;
+    }
+	}
+
+	&__item {
+		margin-bottom: 2rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@include mq(sm, max) {
+			margin-bottom: 24px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+    }
+	}
+
+  &__link {
+    &.primary-link {
+      color: var(--color-grayscale-900) !important;
+      font-size: 1.8rem !important;
+
+      span::after {
+        background-color: var(--color-grayscale-900);
+      }
+
+      @include mq(sm, max) {
+        font-size: 2.4rem !important;
+      }
+    }
+  }
+
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
+		@include mq(sm, max) {
+			margin-top: auto;
+    }
+	}
+
+	&__address,
+	&__label {
+		font-size: 12px;
+		line-height: 120%;
+		color: var(--color-grayscale-400);
+	}
+
+	&__label {
+		margin-bottom: 12px;
+	}
+
+	&__number {
+		&.primary-link {
+      color: var(--color-grayscale-900) !important;
+			font-size: 24px;
+			line-height: 100%;
+			letter-spacing: -0.03em;
+		}
+	}
+
+	&__buttons {
+		display: none;
+		flex-wrap: nowrap;
+		column-gap: 6px;
+
+		@include mq(sm, max) {
+			display: flex;
+
+			.nav-popup__button--compare {
+				min-width: 218px
+			}
+    }
+	}
+
+	&__button {
+		flex-grow: 1;
+
+		&.product-card__button {
+			padding: 12px 20px;
+			min-height: 40px;
+
+			span {
+				font-size: 14px;
+				line-height: 120%;
+				text-align: center;
+				letter-spacing: 0.05em;
+			}
+
+			.icon-search,
+			.icon-comparison {
+				width: 16px;
+				height: 16px;
+				margin-right: 12px;
+			}
+		}
+	}
+}

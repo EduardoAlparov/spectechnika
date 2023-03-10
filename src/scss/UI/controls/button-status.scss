@@ -1,0 +1,22 @@
+.button-status {
+  padding: 0.5rem 1rem;
+
+  font-size: 1.4rem;
+  line-height: 120%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-radius: 2rem;
+  background-color: var(--color-grayscale-900);
+  color: var(--color-white);
+
+  pointer-events: none;
+
+  &--grey {
+    background-color: var(--color-grayscale-400);
+  }
+
+  @include mq(sm, max) {
+    font-size: 12px;
+  }
+}

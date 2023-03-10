@@ -1,0 +1,253 @@
+section.product-card
+  .section__title.visually-hidden
+    | section main title
+
+  .product-card__slider-wrapper
+    .product-card__slider.swiper.js-product-card-swiper
+      .product-card__list.swiper-wrapper
+        .product-card__item.swiper-slide
+          .product-card__picture
+            +picture('product-card/img-1.jpg', 'Камазы бортовые с КМУ ООО «СПЕЦТЕХНИКА»')
+        .product-card__item.swiper-slide
+          .product-card__picture
+            +picture('product-card/img-2.jpg', 'Камазы бортовые с КМУ ООО «СПЕЦТЕХНИКА»')
+        .product-card__item.swiper-slide
+          .product-card__picture
+            +picture('product-card/img-3.jpg', 'Камазы бортовые с КМУ ООО «СПЕЦТЕХНИКА»')
+
+      .product-card__navigation
+        .site-container
+          .button-slider-wrapper.button-slider-wrapper--dark
+            button.button-slider.button-slider--left.product-card__slider-button.product-card__slider-button--prev(type="button")
+              +icon-mono('v-arrow-l')
+            button.button-slider.button-slider--rigth.product-card__slider-button.product-card__slider-button--next(type="button")
+              +icon-mono('v-arrow-r')
+
+    .product-card__breadcrumbs
+      .site-container
+        .section__breadcrumbs.breadcrumbs
+          ul.breadcrumbs__list
+            li.breadcrumbs__item
+              a( href="/" ).breadcrumbs__link
+                | Главная
+            li.breadcrumbs__item
+              a( href="#" ).breadcrumbs__link
+                | Каталог
+            li.breadcrumbs__item
+              a( href="#" ).breadcrumbs__link
+                | Камазы бортовые с КМУ
+            li.breadcrumbs__item
+              a( href="#" ).breadcrumbs__link.breadcrumbs__link--active
+                | Камаз 65207-1002-87(S5) с КМУ Kanglim KS 1256G-II
+
+  .product-card__content
+    .site-container
+      .product-card__top
+        .product-card__info.product-info
+          .product-info__top
+            .product-info__heading
+              .product-info__status
+                button.button-status.button-status--black
+                  | В наличии
+                //- button.button-status.button-status--grey
+                //-   | нет в наличии
+
+              .product-info__title.h3-text.h3-text--black
+                | Камаз 65207—1002-87(S5) с&nbsp;
+                br
+                | КМУ Kanglim KS 1256G-II
+
+              .product-info__text
+                span
+                  | АКПП ZF 12AS2130 без интардера, задний мост Daimler HL6 на
+                  | пн.подвеске, МКБ, ECAS, EBS, ESP, ASR, каб. Daimler (высокая),
+                  | пружинная подвеска кабины, кондиционер, отопитель кабины
+                  | Eberspaecher Airtronic D2 24V, ДЗК, без бокового ограждения,
+                  | УВЭОС
+                a.product-info__text-btn(href="#")
+                  span._open-text
+                    i
+                      | ...
+                    span
+                      | Читать полностью
+                  span._close-text
+                    | Скрыть
+            .product-info__pricing
+              .product-info__new-price.h4-text
+                | от 5 500 000 ₽
+
+              .product-info__old-price
+                span.product-info__old-price-value
+                  | от 5 500 000 ₽
+                .product-info__discount.discount
+                  | –20%
+
+              a.product-info__price-link.primary-link(href="#")
+                span.link-text
+                  | Нашли дешевле?
+
+        .product-card__controls
+          a.product-card__download.product-card__button(
+            href="#",
+            download
+          )
+            | Скачать КП
+
+          a.product-card__compare.product-card__button(href="#")
+            +icon-mono('compare')
+            span
+              | сравнить
+
+          a.product-card__order.product-card__button.button-primary(href="#")
+            | Заказать
+
+      .product-card__spec.spec
+        .spec__controls
+          button.spec__button.spec__button--active.primary-link.spec__button--chassis(data-role="spec-chassis")
+            span.link-text
+              | Характеристики шасси
+          button.spec__button.primary-link.spec__button--crane(data-role="spec-crane")
+            span.link-text
+              | Характеристики КМУ
+        .spec__table.spec__table--visible#spec-chassis
+          .spec__table-row
+            .spec__table-col
+              span.spec__key
+                | Колесная формула
+            .spec__table-col
+              span.spec__value
+                | 4х2
+          .spec__table-row
+            .spec__table-col
+              span.spec__key
+                | Тип ошинковки
+            .spec__table-col
+              span.spec__value
+                | 2
+          .spec__table-row
+            .spec__table-col
+              span.spec__key
+                | Г/п, т (наг./ССУ)
+            .spec__table-col
+              span.spec__value
+                | 10,82
+          .spec__table-row
+            .spec__table-col
+              span.spec__key
+                | Мощн. двиг. л.с.
+            .spec__table-col
+              span.spec__value
+                | 401
+          .spec__table-row
+            .spec__table-col
+              span.spec__key
+                | Модель КП
+            .spec__table-col
+              span.spec__value
+                | ZF 12АS
+          .spec__table-row
+            .spec__table-col
+              span.spec__key
+                | П/о главной передачи
+            .spec__table-col
+              span.spec__value
+                | 3,077
+          .spec__table-row
+            .spec__table-col
+              span.spec__key
+                | Спальное место
+            .spec__table-col
+              span.spec__value
+                | 1
+          .spec__table-row
+            .spec__table-col
+              span.spec__key
+                | Шины
+            .spec__table-col
+              span.spec__value
+                | 315/70R22,5
+          .spec__table-row
+            .spec__table-col
+              span.spec__key
+                | Бак, л
+            .spec__table-col
+              span.spec__value
+                | 700
+          .spec__table-row
+            .spec__table-col
+              span.spec__key
+                | ТСУ (высота ССУ при полной / снаряженной массе)
+            .spec__table-col
+              span.spec__value
+                | 1150
+        .spec__table#spec-crane
+          .spec__table-row
+            .spec__table-col
+              span.spec__key
+                | XXXXXXXXXXXXXXXXXXXXXXXXX
+            .spec__table-col
+              span.spec__value
+                | 4х2
+          .spec__table-row
+            .spec__table-col
+              span.spec__key
+                | Тип ошинковки
+            .spec__table-col
+              span.spec__value
+                | 2
+          .spec__table-row
+            .spec__table-col
+              span.spec__key
+                | Г/п, т (наг./ССУ)
+            .spec__table-col
+              span.spec__value
+                | 10,82
+          .spec__table-row
+            .spec__table-col
+              span.spec__key
+                | Мощн. двиг. л.с.
+            .spec__table-col
+              span.spec__value
+                | 401
+          .spec__table-row
+            .spec__table-col
+              span.spec__key
+                | Модель КП
+            .spec__table-col
+              span.spec__value
+                | ZF 12АS
+          .spec__table-row
+            .spec__table-col
+              span.spec__key
+                | П/о главной передачи
+            .spec__table-col
+              span.spec__value
+                | 3,077
+          .spec__table-row
+            .spec__table-col
+              span.spec__key
+                | Спальное место
+            .spec__table-col
+              span.spec__value
+                | 1
+          .spec__table-row
+            .spec__table-col
+              span.spec__key
+                | Шины
+            .spec__table-col
+              span.spec__value
+                | 315/70R22,5
+          .spec__table-row
+            .spec__table-col
+              span.spec__key
+                | Бак, л
+            .spec__table-col
+              span.spec__value
+                | 700
+          .spec__table-row
+            .spec__table-col
+              span.spec__key
+                | ТСУ (высота ССУ при полной / снаряженной массе)
+            .spec__table-col
+              span.spec__value
+                | 1150

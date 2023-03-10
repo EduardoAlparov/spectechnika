@@ -1,0 +1,126 @@
+.h1-text {
+  margin-left: -2rem;
+
+  font-weight: 500;
+  font-size: 35rem;
+  line-height: 100%;
+  letter-spacing: -0.06em;
+
+  @include mq(xl, max) {
+    font-size: 24rem;
+  }
+
+  @include mq(md, max) {
+    font-size: 16rem;
+    margin-left: 0;
+  }
+
+  @include mq(sm, max) {
+    font-size: 80px;
+  }
+
+  &--small {
+    font-size: 16rem;
+    letter-spacing: -0.04em;
+    margin-left: 0;
+
+    @include mq(xl, max) {
+      font-size: 12.8rem;
+    }
+
+    @include mq(lg, max) {
+      font-size: 10rem;
+    }
+
+    @include mq(md, max) {
+      font-size: 8rem;
+    }
+
+    @include mq(md, max) {
+      font-size: 56px;
+    }
+
+    @include mq(xs, max) {
+      font-size: 5.2rem;
+    }
+  }
+}
+
+.h2-text {
+  font-weight: 500;
+  font-size: 11.6rem;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  color: var(--color-white);
+
+  @include mq(xl, max) {
+    font-size: 8rem;
+  }
+
+  @include mq(lg, max) {
+    font-size: 6.4rem;
+  }
+
+  @include mq(md, max) {
+    font-size: 5rem;
+  }
+
+  @include mq(sm, max) {
+    font-size: 36px;
+  }
+}
+
+.h3-text {
+  font-weight: 500;
+  font-size: 7.2rem;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+  color: var(--color-white);
+
+  &--black {
+    color: var(--color-grayscale-900);
+  }
+
+  @include mq(xl, max) {
+    font-size: 5.8rem;
+  }
+
+  @include mq(lg, max) {
+    font-size: 5rem;
+  }
+
+  @include mq(md, max) {
+    font-size: 3.2rem;
+  }
+
+  @include mq(sm, max) {
+    font-size: 28px;
+  }
+}
+
+.h4-text {
+  font-weight: 400;
+  font-size: 4.4rem;
+  line-height: 100%;
+
+  @include mq(xl, max) {
+    font-size: 3.6rem;
+  }
+
+  @include mq(md, max) {
+    font-size: 3rem;
+  }
+
+  @include mq(sm, max) {
+    font-size: 24px;
+  }
+}
+
+.h1-text,
+.h2-text,
+.h3-text,
+.h4-text {
+  &--inherit-color {
+    color: inherit;
+  }
+}

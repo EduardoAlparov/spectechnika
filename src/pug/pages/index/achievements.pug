@@ -1,0 +1,80 @@
+section.achievements
+  .site-container
+    .achievements__body
+      .achievements__gallery
+        .achievements__heading
+          .achievements__question
+            | Почему
+            br
+            | СпецТехника?
+          .achievements__text
+            | Мы можем подобрать вам автомобиль КамАЗ серийного
+            | производства для любых задач вашего бизнеса и
+            | по самым низким ценам.
+
+        .achievements__carousel
+          .achievements__slider-wrapper
+            .slider-layout__slider.achievements__slider.swiper.js-swiper-achievements
+              .slider-layout__list.swiper-wrapper
+                .slider-layout__item.swiper-slide
+                  a.image-slide(href="assets/images/achievements/full-img.png", data-fancybox)
+                    span.image-slide__image
+                      +pictureLazy('achievements/img-1.jpg', 'сертификат')
+                .slider-layout__item.swiper-slide
+                  a.image-slide(href="assets/images/achievements/full-img.png", data-fancybox)
+                    span.image-slide__image
+                      +pictureLazy('achievements/img-1.jpg', 'сертификат')
+                .slider-layout__item.swiper-slide
+                  a.image-slide(href="assets/images/achievements/full-img.png", data-fancybox)
+                    span.image-slide__image
+                      +pictureLazy('achievements/img-1.jpg', 'сертификат')
+                .slider-layout__item.swiper-slide
+                  a.image-slide(href="assets/images/achievements/full-img.png", data-fancybox)
+                    span.image-slide__image
+                      +pictureLazy('achievements/img-1.jpg', 'сертификат')
+                .slider-layout__item.swiper-slide
+                  a.image-slide(href="assets/images/achievements/full-img.png", data-fancybox)
+                    span.image-slide__image
+                      +pictureLazy('achievements/img-1.jpg', 'сертификат')
+
+          .achievements__controls
+            .button-slider-wrapper
+              button.button-slider.button-slider--dark.button-slider--left.achievements__button.achievements__button--prev(type="button")
+                +icon-mono('v-arrow-l')
+              button.button-slider.button-slider--dark.button-slider--rigth.achievements__button.achievements__button--next(type="button")
+                +icon-mono('v-arrow-r')
+
+      .achievements__presentation
+        .achievements__heading
+          .achievements__question
+            | Почему
+            br
+            | СпецТехника?
+          .achievements__text
+            | Мы можем подобрать вам автомобиль КамАЗ серийного
+            | производства для любых задач вашего бизнеса и
+            | по самым низким ценам.
+
+        .achievements__title
+          | Компания СпецТехника является официальным дилером крупнейших в
+          |России заводов изготовителей спецтехники на шасси КамАЗ.
+
+        ul.achievements__list
+          li.achievements__item
+            .achievements__image
+              .achievements__icon
+                +icon-multi('tick')
+            .achievements__item-text
+              | Быстрое изготовление спецтехники по выгодням ценам
+          li.achievements__item
+            .achievements__image
+              .achievements__icon
+                +icon-multi('tick')
+            .achievements__item-text
+              | Богатый опыт в работе с техникой КамАЗ
+          li.achievements__item
+            .achievements__image
+              .achievements__icon
+                +icon-multi('tick')
+            .achievements__item-text
+              | Индивидуальный подход к каждому клиенту

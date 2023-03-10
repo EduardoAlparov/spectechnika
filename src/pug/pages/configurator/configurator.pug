@@ -1,0 +1,261 @@
+-
+  configurator__body = [
+    {"imgUrl": "assets/images/configurator/body-1.png", "text": "Седельные тягачи"},
+    {"imgUrl": "assets/images/configurator/body-2.png", "text": "Камазы бортовые с КМУ"},
+    {"imgUrl": "assets/images/configurator/body-3.png", "text": "Зерновозы"},
+    {"imgUrl": "assets/images/configurator/body-4.png", "text": "Фургоны"},
+  ]
+
+  configurator__parameters = ["4x2", "6x2", "6x4", "6x6"]
+
+section.section.configurator
+  .site-container
+    .section__breadcrumbs.breadcrumbs
+      ul.breadcrumbs__list
+        li.breadcrumbs__item
+          a( href="/" ).breadcrumbs__link
+            | Главная
+        li.breadcrumbs__item
+          a( href="#" ).breadcrumbs__link.breadcrumbs__link--active
+            | О компании
+    h1.configurator__title.h1-text.h1-text--small
+      | Конфигура&shy;тор
+    .cat-layout__container
+      .cat-layout__main
+        p.configurator__text(data-number=168)
+          | Конфигуратор спецтехники поможет подобрать комплектацию
+          | автомобиля и проверить комплектующие на совместимость.
+          | Выбирайте, сравнивайте характеристики, заказывайте
+          | дополнительные опции для создания конфигурации
+          | транспортного средства, подходящего для Вас.
+        .configurator__tabs.js-tabs-config
+          .configurator__pagination
+            .configurator__pagination-item.active
+              +icon-multi("circle-dashed")(width="52px" height="52px")
+              span
+                | 1
+            .configurator__pagination-item
+              +icon-multi("circle-dashed")(width="52px" height="52px")
+              span
+                | 2
+            .configurator__pagination-item
+              +icon-multi("circle-dashed")(width="52px" height="52px")
+              span
+                | 3
+          .configurator__tabs-contents
+            .configurator__tabs-content.active
+              span.configurator__tabs-content-page-title
+                | 1. Выберите тип кузова
+              fieldset.configurator__tabs-content-body
+                each bodyItem in configurator__body
+                  label.configurator__tabs-content-body-label
+                    input.configurator__tabs-content-body-input.visually-hidden(type="radio" name="body type")
+                    .configurator__tabs-content-body-box
+                      img.configurator__tabs-content-body-img(src=bodyItem.imgUrl alt="Тип кузова")
+                      span.configurator__tabs-content-body-text= bodyItem.text
+              .configurator__tabs-buttons
+                .configurator__tabs-button.configurator__tabs-button-next.button-primary.button-primary--large
+                  | Далее
+            .configurator__tabs-content
+              span.configurator__tabs-content-page-title
+                | 2. Выберите параметры
+              .configurator__tabs-content-parameters
+                .configurator__tabs-content-subtitle
+                  | Колесная формула
+                fieldset.configurator__tabs-content-contain
+                  each parametersItem in configurator__parameters
+                    label.configurator__tabs-content-parameters-label
+                      input.configurator__tabs-content-parameters-input.visually-hidden(type="radio" name="wheel formula")
+                      .configurator__tabs-content-parameters-box
+                        span.configurator__tabs-content-parameters-text= parametersItem
+                .configurator__tabs-content-selects
+                  .configurator__tabs-content-select-box
+                    .configurator__tabs-content-subtitle
+                      | Тип КМУ
+                    .configurator__tabs-content-select
+                      +Select("type", [
+                          {name: 'Тросовый', value: 'type-1', checked: true},
+                          {name: 'Тросовый 2', value: 'type-2'},
+                          {name: 'Тросовый 3', value: 'type-3'},
+                        ])
+                  .configurator__tabs-content-select-box
+                    .configurator__tabs-content-subtitle
+                      | Грузоподъемность
+                    .configurator__tabs-content-select
+                      +Select("carrying", [
+                          {name: '3 т', value: 'carrying-1', checked: true},
+                          {name: '4 т', value: 'carrying-2'},
+                          {name: '6 т', value: 'carrying-3'},
+                        ])
+              .configurator__tabs-buttons
+                .configurator__tabs-button.configurator__tabs-button-prev.button-border-line
+                  span
+                      | Назад
+                .configurator__tabs-button.configurator__tabs-button-next.button-primary.button-primary--large
+                  span
+                    | Далее
+            .configurator__tabs-content
+              span.configurator__tabs-content-page-title
+                | 3. Выбранная конфигурация
+              fieldset.configurator__tabs-content-total
+                ul.category__list.category__list--row-list
+                  li.category__item
+                    .category__card.card
+                      .card__body
+                        .card__image
+                          +pictureLazy('cards/img-1.jpg', 'карточка товара производителя "СпецТехника"')
+                        .card__info
+                          .card__heading
+                            h5.card__title
+                              | КАМАЗ 54901-004-92
+                            ul.card__features
+                              li.card__feature
+                                span.card__feature-name
+                                  | Колесная формула
+                                span.card__feature-value
+                                  | 4х2
+                              li.card__feature
+                                span.card__feature-name
+                                  | Тип ошинковки
+                                span.card__feature-value
+                                  | 2
+                              li.card__feature
+                                span.card__feature-name
+                                  | Г/п, т (наг./ССУ)
+                                span.card__feature-value
+                                  | 10,82
+                              li.card__feature
+                                span.card__feature-name
+                                  | Колесная формула
+                                span.card__feature-value
+                                  | 4х2
+                              li.card__feature
+                                span.card__feature-name
+                                  | Тип ошинковки
+                                span.card__feature-value
+                                  | 2
+                              li.card__feature
+                                span.card__feature-name
+                                  | Г/п, т (наг./ССУ)
+                                span.card__feature-value
+                                  | 10,82
+                              li.card__feature
+                                span.card__feature-name
+                                  | Колесная формула
+                                span.card__feature-value
+                                  | 4х2
+                          .card__bottom
+                            .card__price
+                              span
+                                | от 5 500 000 ₽
+                            .card__controls
+                              button.button-primary.button-primary--medium
+                                | Заказать
+                              a.card__link.primary-link(href="#")
+                                +icon-mono('comparison')
+                                span.link-text
+                                  | В сравнение
+                  li.category__item
+                    .category__card.card
+                      .card__body
+                        .card__image
+                          +pictureLazy('cards/img-1.jpg', 'карточка товара производителя "СпецТехника"')
+                        .card__info
+                          .card__heading
+                            h5.card__title
+                              | КАМАЗ 54901-004-92
+                            ul.card__features
+                              li.card__feature
+                                span.card__feature-name
+                                  | Колесная формула
+                                span.card__feature-value
+                                  | 4х2
+                              li.card__feature
+                                span.card__feature-name
+                                  | Тип ошинковки
+                                span.card__feature-value
+                                  | 2
+                              li.card__feature
+                                span.card__feature-name
+                                  | Г/п, т (наг./ССУ)
+                                span.card__feature-value
+                                  | 10,82
+                              li.card__feature
+                                span.card__feature-name
+                                  | Колесная формула
+                                span.card__feature-value
+                                  | 4х2
+                              li.card__feature
+                                span.card__feature-name
+                                  | Тип ошинковки
+                                span.card__feature-value
+                                  | 2
+                              li.card__feature
+                                span.card__feature-name
+                                  | Г/п, т (наг./ССУ)
+                                span.card__feature-value
+                                  | 10,82
+                              li.card__feature
+                                span.card__feature-name
+                                  | Колесная формула
+                                span.card__feature-value
+                                  | 4х2
+                              li.card__feature
+                                span.card__feature-name
+                                  | Тип ошинковки
+                                span.card__feature-value
+                                  | 2
+                              li.card__feature
+                                span.card__feature-name
+                                  | Г/п, т (наг./ССУ)
+                                span.card__feature-value
+                                  | 10,82
+                              li.card__feature
+                                span.card__feature-name
+                                  | Колесная формула
+                                span.card__feature-value
+                                  | 4х2
+                              li.card__feature
+                                span.card__feature-name
+                                  | Тип ошинковки
+                                span.card__feature-value
+                                  | 2
+                              li.card__feature
+                                span.card__feature-name
+                                  | Г/п, т (наг./ССУ)
+                                span.card__feature-value
+                                  | 10,82
+                              li.card__feature
+                                span.card__feature-name
+                                  | Колесная формула
+                                span.card__feature-value
+                                  | 4х2
+                              li.card__feature
+                                span.card__feature-name
+                                  | Тип ошинковки
+                                span.card__feature-value
+                                  | 2
+                              li.card__feature
+                                span.card__feature-name
+                                  | Г/п, т (наг./ССУ)
+                                span.card__feature-value
+                                  | 10,82
+                          .card__bottom
+                            .card__price
+                              span
+                                | от 5 500 000 ₽
+                            .card__controls
+                              button.button-primary.button-primary--medium
+                                | Заказать
+                              a.card__link.primary-link(href="#")
+                                +icon-mono('comparison')
+                                span.link-text
+                                  | В сравнение
+              .configurator__tabs-buttons
+                .configurator__tabs-button.configurator__tabs-button-prev.button-border-line
+                  span
+                      | Назад
+                a.configurator__tabs-button.configurator__tabs-button-next.button-primary.button-primary--large(href="#")
+                  span
+                    | Распечатать #[span(class="configurator__tabs-button-next-text") список]
+

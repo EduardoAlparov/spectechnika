@@ -1,0 +1,362 @@
+.category {
+  padding: 3rem 0 14rem;
+
+  @include mq(lg, max) {
+    padding: 22px 0 40px;
+  }
+
+  &__body {
+    padding: 7.6rem 0 0;
+    gap: 8.5rem;
+
+    @include mq(lg, max) {
+      padding: 45px 0 0;
+
+      &.cat-layout__body {
+        gap: 35px;
+      }
+    }
+  }
+
+  &__tags-wrapper {
+    @include mq(lg, max) {
+      margin-top: 16px;
+    }
+  }
+
+  &__tags {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1.2rem;
+
+    @include mq(lg, max) {
+      gap: 4px;
+    }
+  }
+
+  &__container {
+    gap: 3.6rem;
+
+    @include mq(lg, max) {
+      &.cat-layout__container {
+        gap: 0;
+      }
+    }
+  }
+
+  &__filters {
+    padding-top: 1rem;
+    padding-right: 2.5rem;
+
+    @include mq(lg, max) {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 80;
+      min-height: 100vh;
+      padding: 125px 16px 25px 16px;
+      background: rgba(#000000, 0.9);
+      visibility: hidden;
+      opacity: 0;
+      right: -9999px;
+      transition: unset;
+
+      &--open {
+        opacity: 1;
+        visibility: visible;
+        right: 0;
+      }
+    }
+  }
+
+  &__main {
+    gap: 2rem;
+  }
+
+  &__list {
+    display: flex;
+
+    &--wrap {
+      flex-wrap: wrap;
+      gap: 6rem 2rem;
+
+      .category__item {
+        width: calc(100% / 3 - 1.5rem);
+        min-width: 38.5rem;
+
+        @include mq(xxl, max) {
+          width: calc(100% / 3 - 1.5rem);
+          min-width: unset;
+        }
+
+        @include mq(custom, max, 1520) {
+          width: calc(100% / 2 - 1.5rem);
+          min-width: unset;
+        }
+
+        @include mq(lg, max) {
+          width: calc(100% / 3 - 1.5rem);
+          min-width: unset;
+        }
+
+        @include mq(custom, max, 1140) {
+          width: calc(100% / 2 - 1.5rem);
+          min-width: unset;
+        }
+
+        @include mq(sm, max) {
+          width: 100%;
+          min-width: unset;
+        }
+      }
+
+
+      .card {
+        width: 100%;
+
+        &__body {
+          width: unset;
+          max-width: unset;
+
+          @include mq(md, max) {
+            // width: 331px;
+            // max-width: 331px;
+          }
+        }
+
+        &__image {
+          img {
+            min-width: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+
+          @include mq(xxl, max) {
+            flex: 1 1 auto;
+          }
+        }
+
+        &__features {
+          @include mq(md, max) {
+            max-height: 5rem;
+          }
+        }
+
+        &__controls {
+          @include mq(md, max) {
+            column-gap: 20px;
+
+            .button-primary {
+              padding: 11px 36px;
+              flex-grow: 1;
+              display: block;
+              max-width: 167px;
+              font-size: 14px;
+            }
+            // .button-primary--medium {
+            //   padding: 11px 40px;
+            // }
+          }
+        }
+      }
+    }
+
+    &--row-list {
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 2rem;
+
+      .category__item {
+        width: 100%;
+
+        @include mq(sm, max) {
+          width: calc(100% / 2 - 1rem);
+          min-width: unset;
+        }
+      }
+
+      .card {
+        width: 100%;
+
+        &__body {
+          width: 100%;
+          max-width: unset;
+          flex-direction: row;
+          align-items: stretch;
+          min-height: 37rem;
+
+          @include mq(xxl, max) {
+            min-height: 32rem;
+          }
+
+          @include mq(xl, max) {
+            min-height: 28rem;
+          }
+
+          @include mq(sm, max) {
+            flex-direction: column;
+          }
+        }
+
+        &__image {
+          position: relative;
+          flex: 0 0 44.5%;
+          max-width: 44.5%;
+          overflow: hidden;
+
+          img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            min-height: 100%;
+            min-width: 100%;
+            max-width: unset;
+            object-fit: cover;
+            object-position: center;
+          }
+
+          @include mq(custom, max, 1380) {
+            flex: 0 0 40%;
+            max-width: 40%;
+          }
+
+          @include mq(sm, max) {
+            max-width: unset;
+            flex: 0 0 220px;
+            overflow: hidden;
+          }
+
+          @include mq(xxs, max) {
+            max-width: unset;
+            flex: 0 0 108px;
+            overflow: hidden;
+          }
+        }
+
+        &__info  {
+          flex-direction: row;
+          padding: 3.6rem 7.6rem 3.6rem 4rem;
+
+          @include mq(xxl, max) {
+            gap: 2rem;
+            padding: 1.6rem 3.6rem 1.6rem 2rem;
+          }
+
+          @include mq(sm, max) {
+            flex-direction: column;
+            padding: 15px 10px 15px 10px;
+          }
+        }
+
+        &__heading {
+          justify-content: unset;
+          gap: 2.2rem;
+
+          @include mq(sm, max) {
+            gap: 15px;
+          }
+        }
+
+        &__title {
+          @include mq(sm, max) {
+            font-size: 16px;
+            max-height: unset;
+            word-break: unset;
+            overflow: unset;
+          }
+        }
+
+        &__features {
+          gap: 0.8rem;
+          max-height: 20rem;
+
+          @include mq(sm, max) {
+            max-height: 60px;
+            gap: 6px;
+          }
+        }
+
+        &__feature {
+          gap: 2.5rem;
+
+          @include mq(xl, max) {
+            font-size: 12px;
+          }
+
+          @include mq(sm, max) {
+            gap: 0;
+            flex-direction: column;
+          }
+        }
+
+        &__feature-value {
+          flex: 0 1 30%;
+          text-align: left;
+        }
+
+        .product-info__old-price {
+          display: none;
+        }
+
+        &__controls {
+          flex: 1 0 auto;
+          flex-direction: column;
+          align-items: flex-start;
+
+          @include mq(sm, max) {
+            gap: 23px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: start;
+          }
+        }
+
+        &__link {
+          @include mq(sm, max) {
+            .link-text {
+               display: none;
+            }
+          }
+        }
+
+        &__price {
+          font-size: 2.4rem;
+          letter-spacing: -0.02em;
+
+          @include mq(xl, max) {
+            font-size: 18px;
+          }
+        }
+
+      }
+
+      @include mq(sm, max) {
+        flex-direction: row;
+      }
+    }
+
+    .card__title {
+      @include mq(xl, max) {
+        font-size: 18px;
+      }
+    }
+
+    .card__title {
+      @include mq(xl, max) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__add-button {
+    display: none;
+
+    @include mq(lg, max) {
+      display: flex;
+    }
+  }
+}

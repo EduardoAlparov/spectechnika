@@ -1,0 +1,26 @@
+-
+  services__list = ['Перенос ресиверов', 'Установка сигнала заднего хода', 'Установка прикуривателя', 'Установка сигнализации', 'Антикоррозионная обработка - кабина', 'Гидрофикация КАМАЗ', 'Антикоррозионная обработка - рамы и кабины', 'Подогреваемое лобовое стекло', 'Замена пластиковых трубок тормозной и топливной системы на медные', 'Защита кабины от веток', 'Зеркала с электроподогревом', 'Камаз 44108, 43118 установка выхлоп вверх с искрогасителем, защита бака с 4- сторон, проблесковые маячки на дуге 2 шт.', 'Крепление электропучков и пневмо трубок вдоль и по раме', 'Наращивание бортов Камаз 65115, 6520 (Самосвал)', 'Наращивание бортов Камаз-борт, прицеп-борт', 'Перекрас кабины', 'Подогрев аккумуляторного отсека от системы охлаждения двигателя. ПТ-570', 'Подогрев сидений', 'Подогрев топливопроводов', 'Подогрев ФГОТ и ФТОТ'];
+
+section.section.services
+  .site-container
+    .section__breadcrumbs.breadcrumbs
+      ul.breadcrumbs__list
+        li.breadcrumbs__item
+          a( href="/" ).breadcrumbs__link
+            | Главная
+        li.breadcrumbs__item
+          a( href="#" ).breadcrumbs__link.breadcrumbs__link--active
+            | Услуги
+    h1.services__title.h1-text.h1-text--small
+      | Услуги
+    .services__list-wrapper
+      ul.services__list
+        for i in services__list
+          li.services__list-item
+            p.services__list-item-text= i
+    button.button-border-line.js-list-toggle-btn(type="button")
+      span.default-label
+        | Показать ещё
+      span.active-label
+        | Скрыть
+

@@ -1,0 +1,51 @@
+section.section.leasing.section--black
+  h1.section__title.visually-hidden
+    | leasing section title
+
+  .site-container
+    .slider-layout.leasing__layout
+      .slider-layout__title.h3-text.h3-text--inherit-color
+        | Лизинг партнеры
+
+      .slider-layout__body.leasing__body
+
+        .slider-layout__sidebar
+          .slider-layout__controls
+            .button-slider-wrapper
+              button.button-slider.button-slider--left.leasing__button.leasing__button--prev(type="button")
+                +icon-mono('v-arrow-l')
+              button.button-slider.button-slider--rigth.leasing__button.leasing__button--next(type="button")
+                +icon-mono('v-arrow-r')
+
+        .slider-layout__main
+          .slider-layout__slider-wrapper.leasing__outer-wrapper
+            .slider-layout__slider.leasing__slider.swiper.js-swiper-leasing
+              .slider-layout__list.swiper-wrapper
+                .slider-layout__item.swiper-slide
+                  .partners
+                    .partners__image
+                      +picture('partners/img-3.png', 'клиент компании "Спецтехника"')
+                .slider-layout__item.swiper-slide
+                  .partners
+                    .partners__image
+                      +picture('partners/img-2.png', 'клиент компании "Спецтехника"')
+                .slider-layout__item.swiper-slide
+                  .partners
+                    .partners__image
+                      +picture('partners/img-1.png', 'клиент компании "Спецтехника"')
+                .slider-layout__item.swiper-slide
+                  .partners
+                    .partners__image
+                      +picture('partners/img-4.png', 'клиент компании "Спецтехника"')
+                .slider-layout__item.swiper-slide
+                  .partners
+                    .partners__image
+                      +picture('partners/img-3.png', 'клиент компании "Спецтехника"')
+                .slider-layout__item.swiper-slide
+                  .partners
+                    .partners__image
+                      +picture('partners/img-3.png', 'клиент компании "Спецтехника"')
+                .slider-layout__item.swiper-slide
+                  .partners
+                    .partners__image
+                      +picture('partners/img-3.png', 'клиент компании "Спецтехника"')

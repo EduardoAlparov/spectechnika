@@ -1,0 +1,18 @@
+.leasing {
+  &__body {
+    padding-top: 3.2rem;
+
+    @include mq(lg, max) {
+      padding-top: 0;
+      gap: 20px !important;
+    }
+  }
+
+  &__outer-wrapper {
+    padding: 0 0.2rem;
+
+    @include mq(lg, max) {
+      padding: 0;
+    }
+  }
+}

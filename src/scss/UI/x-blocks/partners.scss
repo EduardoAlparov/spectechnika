@@ -1,0 +1,36 @@
+.partners {
+  width: 28.3rem;
+  height: 29rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30rem;
+
+  &__image {
+    img {
+      max-width: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  @include mq(xl, max) {
+    width: 19rem;
+    height: 19.3rem;
+
+    img {
+      transform: scale(0.8);
+    }
+  }
+
+  @include mq(sm, max) {
+    width: 135px;
+    height: 135px;
+
+    img {
+      transform: scale(0.6);
+    }
+  }
+}

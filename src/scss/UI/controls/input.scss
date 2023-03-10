@@ -1,0 +1,66 @@
+.input {
+  width: 100%;
+  padding: 0 0 2.2rem 0;
+
+  border-style: solid;
+  border-color: var(--color-white);
+  border-width: 0 0 1px 0;
+
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: var(--color-white);
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    color: var(--color-white);
+
+    @include mq(sm, max) {
+      font-size: 18px;
+    }
+  }
+
+  &:-moz-placeholder {
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    color: var(--color-white);
+
+    @include mq(sm, max) {
+      font-size: 18px;
+    }
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:focus,
+  &:-internal-autofill-selected {
+    background-color: transparent !important;
+    background-image: none !important;
+    color: rgb(0, 0, 0) !important;
+  }
+
+  &--dark {
+    border-color: var(--color-grayscale-900);
+    color: var(--color-grayscale-900);
+
+    &::placeholder {
+      color: var(--color-grayscale-900);
+    }
+  }
+
+  @include mq(sm, max) {
+    font-size: 18px;
+    padding: 0 0 16px 0;
+  }
+
+  &:focus {
+    &::placeholder {
+      color: transparent;
+    }
+  }
+}

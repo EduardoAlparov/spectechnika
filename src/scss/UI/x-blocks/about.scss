@@ -1,0 +1,26 @@
+.about {
+  font-size: 1.4rem;
+  line-height: 120%;
+  color: var(--color-bg);
+  opacity: 0.4;
+
+  &__name {
+    margin-bottom: 14px;
+  }
+
+  &__address {
+    max-width: 25rem;
+    
+    @include mq(sm, max) {
+      max-width: unset;
+    }
+  }
+
+  @include mq(sm, max) {
+    font-size: 1.2rem;
+  }
+
+  @include mq(xxs, max) {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,10 @@
+extends layout/default.pug
+
+block variables
+  - const bodyClass = "page-search-results"
+  - const headerClass = "header header--simple fix-block"
+  - const pageTitle = "Результаты поиска"
+  - const siteLang = "ru"
+
+block content
+  include pages/search-results/main.pug

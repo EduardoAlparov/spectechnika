@@ -1,0 +1,375 @@
+.main-slide {
+  color: var(--color-white);
+
+  &:first-child {
+    .main-slide__pic,
+    .main-slide__info {
+      clip-path: inset(0 100% 0 0);
+      -webkit-clip-path: inset(0 100% 0 0);
+
+      transition: .8s linear 0.5s;
+    }
+
+    .main-slide__slogan,
+    .main-slide__button {
+      opacity: 0;
+      transition: 1s ease-out 0.8s;
+    }
+
+    .main-slide__button {
+      transition: 1s ease-out 1s;
+    }
+  }
+
+  &__body {
+    display: flex;
+    width: 100%;
+    column-gap: 3rem;
+
+    @include mq(lg, max) {
+      flex-direction: column;
+      gap: 5rem;
+    }
+
+    @include mq(md, max) {
+      gap: 5rem;
+    }
+
+    @include mq(sm, max) {
+      gap: 20px;
+    }
+  }
+
+  &__salutation {
+    flex-basis: 25%;
+
+    @include mq(sm, max) {
+      padding: 10px 0 5px;
+    }
+  }
+
+  &__slogan {
+    position: relative;
+    z-index: 2;
+    line-height: 120%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: .8rem;
+      left: -1rem;
+      z-index: -1;
+
+      width: 12.6rem;
+      height: 5.8rem;
+
+      background-image: url('../../assets/images/intro/decore-vector.svg');
+      background-size: cover;
+    }
+
+    @include mq(sm, max) {
+      font-size: 14px;
+
+      &::before {
+        top: -7px;
+        left: 32px;
+        width: 68px;
+        height: 37px;
+        background-image: url('../../assets/images/intro/decore-vector-mobile.svg');
+      }
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    z-index: 10;
+    flex: 1 0 auto;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 6rem;
+
+    @include mq(md, max) {
+      gap: 3rem;
+      flex-direction: row-reverse;
+    }
+
+    @include mq(sm, max) {
+      gap: 15px;
+    }
+
+    @include mq(xs, max) {
+      flex-direction: column-reverse;
+      gap: 15px;
+      width: min-content;
+    }
+
+    &:hover {
+      .main-slide__title {
+        .link-text::after {
+          width: 100%;
+        }
+      }
+
+      .main-slide__image {
+        ._circle {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    display: inline;
+    height: auto;
+    width: auto;
+    line-height: 106%;
+    text-decoration: none;
+    background: linear-gradient(#fff,#fff) left bottom no-repeat;
+    background-size: 0% 0.2rem;
+    background-repeat: no-repeat;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    transition: all 0.5s;
+
+    @include hover {
+      background-size: 100% 0.2rem;
+    }
+
+    @include mq(sm, max) {
+      max-width: 283px;
+      overflow: hidden;
+
+      @include mq(sm, max) {
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__features {
+    display: flex;
+    gap: 7.8rem;
+    margin-top: 13%;
+
+    @include mq(lg, max) {
+      gap: 4rem;
+    }
+
+    @include mq(sm, max) {
+      gap: 20px;
+      margin-top: 20px;
+    }
+  }
+
+  &__feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1rem;
+
+
+    ._feature-name {
+      font-size: 1.4rem;
+      line-height: 179%;
+      color: var(--color-white);
+      opacity: 0.3;
+
+      @include mq(xl, max) {
+        line-height: 120%;
+      }
+    }
+
+    ._feature-value {
+      font-size: 4.4rem;
+      line-height: 100%;
+      color: var(--color-white);
+
+      @include mq(xl, max) {
+        font-size: 3.6rem;
+      }
+
+      @include mq(md, max) {
+        font-size: 3rem;
+      }
+
+      @include mq(sm, max) {
+        font-size: 24px;
+      }
+    }
+
+    @include mq(xl, max) {
+      gap: 8px;
+    }
+
+    @include mq(sm, max) {
+      &:first-child {
+        max-width: 130px;
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+
+    @include mq(sm, max) {
+      width: max-content;
+    }
+  }
+
+  &__pic {
+    width: 41.2rem;
+    height: 24.2rem;
+
+    overflow: hidden;
+    border-radius: 1.2rem;
+
+    img {
+      min-height: 100%;
+      min-width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @include mq(xxl, max) {
+      width: 39.2rem;
+      height: 21.2rem;
+    }
+
+    @include mq(xl, max) {
+      width: 29rem;
+      height: 17rem;
+    }
+
+    @include mq(sm, max) {
+      width: 25rem;
+      height: 15rem;
+    }
+
+    @include mq(xs, max) {
+      width: 283px;
+      height: 165px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    left: -6.4rem;
+    bottom: 3rem;
+
+    width: 9.2rem;
+    height: 9.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 100%;
+
+    @include mq(lg, max) {
+      left: -3.4rem;
+      bottom: 2rem;
+
+      width: 7.2rem;
+      height: 7.2rem;
+    }
+
+    @include mq(md, max) {
+      width: 49px;
+      height: 49px;
+    }
+
+    @include mq(md, max) {
+      left: 1.2rem;
+      bottom: -1rem;
+    }
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+
+      width: 3.5rem;
+      max-height: 100%;
+      fill: var(--color-white);
+
+      @include mq(md, max) {
+        width: 24px;
+      }
+    }
+
+    .icon-arrow-r  {
+      @include mq(md, max) {
+        display: none;
+      }
+    }
+
+    .icon-arrow-rmob {
+      display: none;
+
+      @include mq(md, max) {
+        display: block;
+      }
+    }
+
+    ._circle-wrapper {
+      width: 50%;
+      height: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: relative;
+    }
+
+    ._circle {
+      width: 9.2rem;
+      height: 9.2rem;
+      min-width: 9.2rem;
+      min-height: 9.2rem;
+
+      border-radius: 100%;
+      background-color: var(--color-primary-500);
+
+      transition: var(--transition);
+
+      @include mq(lg, max) {
+        width: 7.2rem;
+        height: 7.2rem;
+        min-width: 7.2rem;
+        min-height: 7.2rem;
+      }
+
+      @include mq(md, max) {
+        width: 49px;
+        height: 49px;
+        min-width: 49px;
+        min-height: 49px;
+      }
+    }
+  }
+}
+
+._animate {
+  .main-slide {
+    &:first-child {
+      .main-slide__pic,
+      .main-slide__info {
+        clip-path: inset(0 0 0 0);
+        -webkit-clip-path: inset(0 0 0 0);
+      }
+
+      .main-slide__slogan,
+      .main-slide__button {
+        opacity: 1;
+      }
+    }
+  }
+}

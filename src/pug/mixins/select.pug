@@ -1,0 +1,20 @@
+mixin Select(name, options)
+  .select
+    .select__current(tabindex="1")
+      each option, index in options
+        .select__value
+          input.select__input(
+            type="radio"
+            id=option.value
+            value=option.value
+            name=name
+            checked=option.checked
+          )
+          p.select__input-text #{option.name}
+      .select__icon
+        +icon-multi('arrow-d')
+    .select__list-wrapper
+      ul.select__list
+        each option, index in options
+          li
+            label.select__option(for=option.value aria-hidden) #{option.name}

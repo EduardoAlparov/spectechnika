@@ -1,0 +1,192 @@
+.form {
+  position: relative;
+  padding: 10rem 0 12rem;
+  background-color: var(--color-primary-500);
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-image: url('../../assets/images/advant/pattern.svg');
+    background-position: right top;
+    background-repeat: space;
+    z-index: 1;
+  }
+
+  @include mq(md, max) {
+    padding: 5rem 0 6rem;
+  }
+
+  @include mq(sm, max) {
+    padding: 48px 0 55px;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-white);
+
+    @include mq(xl, max) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2.8rem;
+
+    @include mq(sm, max) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__text {
+    max-width: 36rem;
+
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 110%;
+
+    @include mq(md, max) {
+      font-size: 1.6rem;
+    }
+
+    @include mq(sm, max) {
+      font-size: 14px
+    }
+  }
+
+  &__contacts {
+    .nav-popup__label {
+      margin-bottom: 2rem;
+    }
+
+    .nav-popup__number {
+      margin-bottom: 1.6rem;
+    }
+
+    .primary-link {
+      color: var(--color-grayscale-900);
+  
+      span::after {
+        background-color: var(--color-grayscale-900);
+      }
+    }
+  }
+
+  &__controls,
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 6.4rem;
+
+    @include mq(sm, max) {
+      gap: 52px;
+    }
+  }
+
+  &__controls {
+    flex: 1 0 49.3%;
+    padding-top: 19rem;
+
+    @include mq(xl, max) {
+      width: 70%;
+      padding-top: 0;
+      margin-top: 58px;
+    }
+
+    @include mq(sm, max) {
+      width: 100%;
+      gap: 39px;
+    }
+  }
+
+  &__inputs {
+    padding-right: 6rem;
+
+    @include mq(xl, max) {
+      padding-right: 0;
+    }
+  }
+
+  &__input-wrapper--with-label {
+    position: relative;
+  }
+
+  &__label {
+    position: absolute; 
+    top: -2rem;
+    left: 0;
+    font-size: 1.4rem;
+    line-height: 120%;
+    
+    @include mq(sm, max) {
+      font-size: 12px;
+    }
+  }
+
+  &__submit {
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+
+    button {
+      flex-shrink: 0;
+    }
+
+    @include mq(sm, max) {
+      gap: 16px;
+
+      button {
+        width: 50%;
+        max-width: unset;
+        display: block;
+        text-align: center;
+      }
+    }
+
+    @include mq(xs, max) {
+      flex-wrap: wrap;
+      button {
+        width: 100%;
+        max-width: unset;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+
+  &__submit-text {
+    max-width: 25.5rem;
+
+    font-size: 1.4rem;
+    line-height: 120%;
+
+    a {
+      text-decoration: underline;
+      cursor: pointer;
+      transition: color var(--transition);
+
+      @include hover {
+        color: var(--color-grey-600);
+      }
+    }
+
+    @include mq(xs, max) {
+      font-size: 12px;
+      max-width: unset;
+    }
+  }
+
+  &__image {
+    .icon {
+      width: 16rem;
+    }
+  }
+}

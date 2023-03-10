@@ -1,0 +1,10 @@
+extends layout/default.pug
+
+block variables
+  - const bodyClass = "page-error"
+  - const headerClass = "header header--simple"
+  - const pageTitle = "404"
+  - const siteLang = "ru"
+
+block content
+  include pages/error/main.pug

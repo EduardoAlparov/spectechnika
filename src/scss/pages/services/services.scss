@@ -1,0 +1,99 @@
+.services{
+  padding: 2rem 0 14rem;
+
+  @include mq(lg) {
+    padding: 2rem 0 11rem;
+  }
+
+  @include mq(sm) {
+    padding: 2rem 0 8rem;
+  }
+
+  &__title{
+    margin: 8rem 0;
+
+    @include mq(md) {
+      margin: 1.8rem 0 4.3rem;
+    }
+  }
+
+  &__list-wrapper{
+    max-width: 119.5rem;
+    margin-left: auto;
+  }
+
+  &__list{
+    counter-reset: list;
+    margin-bottom: 2rem;
+
+    @include mq(sm) {
+      &.active{
+        .services__list-item{
+          &:nth-child(n+11){
+            display: grid;
+          }
+        }
+      }
+    }
+  }
+
+  &__list-item{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    align-items: center;
+    padding: 2rem 0;
+    gap: 2rem;
+    border-bottom: 0.1rem solid var(--color-grayscale-300);
+
+    @include mq(sm) {
+      grid-template-columns: repeat(6, 1fr);
+      padding: 1.5rem 0;
+      &:nth-child(n+11){
+        display: none;
+      }
+    }
+
+    &:before{
+      position: relative;
+      grid-column: span 3;
+      counter-increment: list;
+      content: counter(list,decimal-leading-zero) "";
+      font-weight: 400;
+      font-size: 2.4rem;
+      line-height: 1.1;
+
+      @include mq(xl) {
+        grid-column: span 2;
+      }
+
+      @include mq(sm) {
+        font-size: 1.8rem;
+        grid-column: span 1;
+      }
+    }
+  }
+
+  &__list-item-text{
+    grid-column: span 6;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 1.1;
+
+    @include mq(xl) {
+      grid-column: span 7;
+    }
+
+    @include mq(sm) {
+      font-size: 1.8rem;
+      grid-column: span 5;
+    }
+  }
+
+  .button-border-line{
+    display: none;
+
+    @include mq(sm) {
+      display: block;
+    }
+  }
+}

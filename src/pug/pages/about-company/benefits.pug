@@ -1,0 +1,21 @@
+-
+  benefits__list = [
+    {"imgUrl": "assets/images/benefits/1.svg", "text": "Широкий ряд техники в наличии"},
+    {"imgUrl": "assets/images/benefits/2.svg", "text": "Индивидуальный подход к каждому клиенту"},
+    {"imgUrl": "assets/images/benefits/3.svg", "text": "Кредит и лизинг"},
+    {"imgUrl": "assets/images/benefits/4.svg", "text": "Гарантия лучшей цены"},
+    {"imgUrl": "assets/images/benefits/5.svg", "text": "Гарантия завода изготовителя"},
+    {"imgUrl": "assets/images/benefits/6.svg", "text": "Изготовление спецтехники по любому тех.заданию"},
+  ]
+
+section.section.benefits
+  .site-container
+    h2.benefits__title.h2-text
+      | Преимущества
+    .cat-layout__container
+      .cat-layout__main
+        ul.benefits__list
+          each item in benefits__list
+            li.benefits__list-item
+              img.benefits__list-item-img(src=item.imgUrl alt="Icon")
+              p.benefits__list-text= item.text

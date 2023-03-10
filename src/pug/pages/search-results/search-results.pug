@@ -1,0 +1,636 @@
+- const tags = [{"title": "Все", "link": "./page-category.html", "class": "tag--active"}, {"title": "Тягачи 4×2", "link": "./page-category-item1.html", "class": ""}, {"title": "Тягачи 6×4", "link": "./page-category-item2.html", "class": ""}, {"title": "Тягачи 6×6", "link": "./page-category-item3.html", "class": ""}];
+- const sortValue = {"Сначала популярные": "popular", "Сначала дешевые": "cheepest", "Сначала дорогие": "expensive"};
+- const viewValue = ["16", "30", "40"];
+
+section.search-results.category
+  .site-container
+    .section__breadcrumbs.breadcrumbs
+      ul.breadcrumbs__list
+        li.breadcrumbs__item
+          a( href="/" ).breadcrumbs__link
+            | Главная
+        li.breadcrumbs__item
+          a( href="#" ).breadcrumbs__link
+            | Результаты поиска
+
+    .search-results__body
+      .search-results__heading
+        h1.h1-text.section__title.search-results__title
+          | Результаты поиска
+
+        .search-results__request 
+          span.search-results__request-label
+            | По запросу:&nbsp;
+          span.search-results__request-value
+            | Камаз
+
+      .cat-layout__container.category__container
+        .cat-layout__sidebar.category__sidebar
+          .category__filters
+            .filters
+              .filters__body
+                .filters__head
+                  .filters__head-title
+                    | Фильтры
+
+                  button.filters__clear-button
+                    | Очистить 
+                .filters__selection.filters__selection--main
+                  .filters__title
+                    | Категории спецтехники
+                  .filters__select
+                    +Select("category", [
+                      {name: 'Все', value: 'category-all', checked: true},
+                      {name: 'Тягачи 4×2', value: 'cat-track-4×2'},
+                      {name: 'Тягачи 6×4', value: 'cat-track-6×4'},
+                      {name: 'Тягачи 6×6', value: 'cat-track-6×6'},
+                    ])
+
+
+                .filters__selections
+                  .filters__selection
+                    .filters__title
+                      | Производитель
+                    .filters__select
+                      +Select("producer", [
+                        {name: 'Все', value: 'all', checked: true},
+                        {name: '1', value: '1'},
+                        {name: '2', value: '2'},
+                        {name: '3', value: '3'},
+                      ])
+
+                  .filters__selection
+                    .filters__title
+                      | Грузоподьемность
+                    .filters__select
+                      +Select("load", [
+                        {name: 'Все', value: 'alls', checked: true},
+                        {name: '11', value: '11'},
+                        {name: '22', value: '22'},
+                        {name: '32', value: '32'},
+                      ])
+
+                  .filters__checkboxes
+                    .filters__checkbox
+                      +Checkbox('Спальное место', 'sleeping-place', 'sleeping-place', false)
+
+                    .filters__checkbox
+                      +Checkbox('В наличии', 'in-stock', 'in-stock', 'checked')
+              button.filters__close-btn
+                +icon-mono('close')
+        .cat-layout__main.category__main
+          .category__control-panel.control-panel
+            .control-panel__filter-button
+              button.button-filter
+                span
+                  | Фильтры
+                +icon-multi('gear')  
+
+            .control-panel__sorting.sorting.visually-hidden
+              .sorting__body
+                button.sorting__current(type="button")
+                  .sorting__text(data-value="Сначала популярные")
+                    | Сначала популярные
+                  .sorting__icon
+                     +icon-multi('sort')
+
+                .sorting__menu
+                  ul.sorting__list
+                    each dat, val in sortValue
+                      li.sorting__item
+                        a.sorting__link(href="#", data-value= dat)= val
+
+            .control-panel__view-quantity.view-quantity
+              .view-quantity__body
+                .view-quantity__title
+                  span
+                    | Количество 
+                  span
+                    | на странице
+                  span  
+                    | :
+
+                button.view-quantity__button
+                  span.view-quantity__span
+                    | 16
+              
+            .control-panel__view-type.view-type
+              input.view-type__input(
+                type="radio",
+                hidden,
+                name="view-type-input",
+                id="view-type-list"
+              )
+              input.view-type__input(
+                type="radio",
+                hidden,
+                name="view-type-input",
+                id="view-type-grid",
+                checked
+              )
+              .view-type__body
+                label.view-type__button.view-type__button--bullets(for="view-type-list")
+                  +icon-multi('bullet-list-text')
+                label.view-type__button.view-type__button--grid(for="view-type-grid")
+                  +icon-multi('grid-list')
+          
+          ul.category__list.category__list--wrap
+            li.category__item
+              .category__card.card
+                .card__body
+                  .card__image
+                    +pictureLazy('cards/img-1.jpg', 'карточка товара производителя "СпецТехника"')
+                  .card__info
+                    .card__heading
+                      h5.card__title
+                        | КАМАЗ 54901-004-92
+                      ul.card__features
+                        li.card__feature
+                          span.card__feature-name
+                            | Колесная формула
+                          span.card__feature-value
+                            | 4х2
+                        li.card__feature
+                          span.card__feature-name
+                            | Тип ошинковки
+                          span.card__feature-value
+                            | 2
+                        li.card__feature
+                          span.card__feature-name
+                            | Г/п, т (наг./ССУ)
+                          span.card__feature-value
+                            | 10,82
+                        li.card__feature
+                          span.card__feature-name
+                            | Колесная формула
+                          span.card__feature-value
+                            | 4х2
+                        li.card__feature
+                          span.card__feature-name
+                            | Тип ошинковки
+                          span.card__feature-value
+                            | 2
+                        li.card__feature
+                          span.card__feature-name
+                            | Г/п, т (наг./ССУ)
+                          span.card__feature-value
+                            | 10,82
+                        li.card__feature
+                          span.card__feature-name
+                            | Колесная формула
+                          span.card__feature-value
+                            | 4х2
+                    .card__bottom
+                      .card__price
+                        span
+                          | от 4 500 000 ₽
+                        .card__old-price.product-info__old-price
+                          span.product-info__old-price-value
+                            | от 5 500 000 ₽
+                          .product-info__discount.discount
+                            | –20%  
+                      .card__controls
+                        button.button-primary.button-primary--medium
+                          | Заказать
+                        a.card__link.primary-link(href="#")
+                          +icon-mono('comparison')
+                          span.link-text
+                            | В сравнение
+
+            li.category__item
+              .category__card.card
+                .card__body
+                  .card__image
+                    +pictureLazy('cards/img-1.jpg', 'карточка товара производителя "СпецТехника"')
+                  .card__info
+                    .card__heading
+                      h5.card__title
+                        | КАМАЗ 54901-004-92
+                      ul.card__features
+                        li.card__feature
+                          span.card__feature-name
+                            | Колесная формула
+                          span.card__feature-value
+                            | 4х2
+                        li.card__feature
+                          span.card__feature-name
+                            | Тип ошинковки
+                          span.card__feature-value
+                            | 2
+                        li.card__feature
+                          span.card__feature-name
+                            | Г/п, т (наг./ССУ)
+                          span.card__feature-value
+                            | 10,82
+                        li.card__feature
+                          span.card__feature-name
+                            | Колесная формула
+                          span.card__feature-value
+                            | 4х2
+                        li.card__feature
+                          span.card__feature-name
+                            | Тип ошинковки
+                          span.card__feature-value
+                            | 2
+                        li.card__feature
+                          span.card__feature-name
+                            | Г/п, т (наг./ССУ)
+                          span.card__feature-value
+                            | 10,82
+                        li.card__feature
+                          span.card__feature-name
+                            | Колесная формула
+                          span.card__feature-value
+                            | 4х2
+                    .card__bottom
+                      .card__price
+                        span
+                          | от 4 500 000 ₽
+                        .card__old-price.product-info__old-price
+                          span.product-info__old-price-value
+                            | от 5 500 000 ₽
+                          .product-info__discount.discount
+                            | –20%  
+                      .card__controls
+                        button.button-primary.button-primary--medium
+                          | Заказать
+                        a.card__link.primary-link(href="#")
+                          +icon-mono('comparison')
+                          span.link-text
+                            | В сравнение
+
+            li.category__item
+              .category__card.card
+                .card__body
+                  .card__image
+                    +pictureLazy('cards/img-1.jpg', 'карточка товара производителя "СпецТехника"')
+                  .card__info
+                    .card__heading
+                      h5.card__title
+                        | КАМАЗ 54901-004-92
+                      ul.card__features
+                        li.card__feature
+                          span.card__feature-name
+                            | Колесная формула
+                          span.card__feature-value
+                            | 4х2
+                        li.card__feature
+                          span.card__feature-name
+                            | Тип ошинковки
+                          span.card__feature-value
+                            | 2
+                        li.card__feature
+                          span.card__feature-name
+                            | Г/п, т (наг./ССУ)
+                          span.card__feature-value
+                            | 10,82
+                        li.card__feature
+                          span.card__feature-name
+                            | Колесная формула
+                          span.card__feature-value
+                            | 4х2
+                        li.card__feature
+                          span.card__feature-name
+                            | Тип ошинковки
+                          span.card__feature-value
+                            | 2
+                        li.card__feature
+                          span.card__feature-name
+                            | Г/п, т (наг./ССУ)
+                          span.card__feature-value
+                            | 10,82
+                        li.card__feature
+                          span.card__feature-name
+                            | Колесная формула
+                          span.card__feature-value
+                            | 4х2
+                    .card__bottom
+                      .card__price
+                        span
+                          | от 4 500 000 ₽
+                        .card__old-price.product-info__old-price
+                          span.product-info__old-price-value
+                            | от 5 500 000 ₽
+                          .product-info__discount.discount
+                            | –20%  
+                      .card__controls
+                        button.button-primary.button-primary--medium
+                          | Заказать
+                        a.card__link.primary-link(href="#")
+                          +icon-mono('comparison')
+                          span.link-text
+                            | В сравнение
+
+            li.category__item
+              .category__card.card
+                .card__body
+                  .card__image
+                    +pictureLazy('cards/img-1.jpg', 'карточка товара производителя "СпецТехника"')
+                  .card__info
+                    .card__heading
+                      h5.card__title
+                        | КАМАЗ 54901-004-92
+                      ul.card__features
+                        li.card__feature
+                          span.card__feature-name
+                            | Колесная формула
+                          span.card__feature-value
+                            | 4х2
+                        li.card__feature
+                          span.card__feature-name
+                            | Тип ошинковки
+                          span.card__feature-value
+                            | 2
+                        li.card__feature
+                          span.card__feature-name
+                            | Г/п, т (наг./ССУ)
+                          span.card__feature-value
+                            | 10,82
+                        li.card__feature
+                          span.card__feature-name
+                            | Колесная формула
+                          span.card__feature-value
+                            | 4х2
+                        li.card__feature
+                          span.card__feature-name
+                            | Тип ошинковки
+                          span.card__feature-value
+                            | 2
+                        li.card__feature
+                          span.card__feature-name
+                            | Г/п, т (наг./ССУ)
+                          span.card__feature-value
+                            | 10,82
+                        li.card__feature
+                          span.card__feature-name
+                            | Колесная формула
+                          span.card__feature-value
+                            | 4х2
+                    .card__bottom
+                      .card__price
+                        span
+                          | от 4 500 000 ₽
+                        .card__old-price.product-info__old-price
+                          span.product-info__old-price-value
+                            | от 5 500 000 ₽
+                          .product-info__discount.discount
+                            | –20%  
+                      .card__controls
+                        button.button-primary.button-primary--medium
+                          | Заказать
+                        a.card__link.primary-link(href="#")
+                          +icon-mono('comparison')
+                          span.link-text
+                            | В сравнение
+
+            li.category__item
+              .category__card.card
+                .card__body
+                  .card__image
+                    +pictureLazy('cards/img-1.jpg', 'карточка товара производителя "СпецТехника"')
+                  .card__info
+                    .card__heading
+                      h5.card__title
+                        | КАМАЗ 54901-004-92
+                      ul.card__features
+                        li.card__feature
+                          span.card__feature-name
+                            | Колесная формула
+                          span.card__feature-value
+                            | 4х2
+                        li.card__feature
+                          span.card__feature-name
+                            | Тип ошинковки
+                          span.card__feature-value
+                            | 2
+                        li.card__feature
+                          span.card__feature-name
+                            | Г/п, т (наг./ССУ)
+                          span.card__feature-value
+                            | 10,82
+                        li.card__feature
+                          span.card__feature-name
+                            | Колесная формула
+                          span.card__feature-value
+                            | 4х2
+                        li.card__feature
+                          span.card__feature-name
+                            | Тип ошинковки
+                          span.card__feature-value
+                            | 2
+                        li.card__feature
+                          span.card__feature-name
+                            | Г/п, т (наг./ССУ)
+                          span.card__feature-value
+                            | 10,82
+                        li.card__feature
+                          span.card__feature-name
+                            | Колесная формула
+                          span.card__feature-value
+                            | 4х2
+                    .card__bottom
+                      .card__price
+                        span
+                          | от 4 500 000 ₽
+                        .card__old-price.product-info__old-price
+                          span.product-info__old-price-value
+                            | от 5 500 000 ₽
+                          .product-info__discount.discount
+                            | –20%  
+                      .card__controls
+                        button.button-primary.button-primary--medium
+                          | Заказать
+                        a.card__link.primary-link(href="#")
+                          +icon-mono('comparison')
+                          span.link-text
+                            | В сравнение
+
+            li.category__item
+              .category__card.card
+                .card__body
+                  .card__image
+                    +pictureLazy('cards/img-1.jpg', 'карточка товара производителя "СпецТехника"')
+                  .card__info
+                    .card__heading
+                      h5.card__title
+                        | КАМАЗ 54901-004-92
+                      ul.card__features
+                        li.card__feature
+                          span.card__feature-name
+                            | Колесная формула
+                          span.card__feature-value
+                            | 4х2
+                        li.card__feature
+                          span.card__feature-name
+                            | Тип ошинковки
+                          span.card__feature-value
+                            | 2
+                        li.card__feature
+                          span.card__feature-name
+                            | Г/п, т (наг./ССУ)
+                          span.card__feature-value
+                            | 10,82
+                        li.card__feature
+                          span.card__feature-name
+                            | Колесная формула
+                          span.card__feature-value
+                            | 4х2
+                        li.card__feature
+                          span.card__feature-name
+                            | Тип ошинковки
+                          span.card__feature-value
+                            | 2
+                        li.card__feature
+                          span.card__feature-name
+                            | Г/п, т (наг./ССУ)
+                          span.card__feature-value
+                            | 10,82
+                        li.card__feature
+                          span.card__feature-name
+                            | Колесная формула
+                          span.card__feature-value
+                            | 4х2
+                    .card__bottom
+                      .card__price
+                        span
+                          | от 4 500 000 ₽
+                        .card__old-price.product-info__old-price
+                          span.product-info__old-price-value
+                            | от 5 500 000 ₽
+                          .product-info__discount.discount
+                            | –20%  
+                      .card__controls
+                        button.button-primary.button-primary--medium
+                          | Заказать
+                        a.card__link.primary-link(href="#")
+                          +icon-mono('comparison')
+                          span.link-text
+                            | В сравнение
+
+            li.category__item
+              .category__card.card
+                .card__body
+                  .card__image
+                    +pictureLazy('cards/img-1.jpg', 'карточка товара производителя "СпецТехника"')
+                  .card__info
+                    .card__heading
+                      h5.card__title
+                        | КАМАЗ 54901-004-92
+                      ul.card__features
+                        li.card__feature
+                          span.card__feature-name
+                            | Колесная формула
+                          span.card__feature-value
+                            | 4х2
+                        li.card__feature
+                          span.card__feature-name
+                            | Тип ошинковки
+                          span.card__feature-value
+                            | 2
+                        li.card__feature
+                          span.card__feature-name
+                            | Г/п, т (наг./ССУ)
+                          span.card__feature-value
+                            | 10,82
+                        li.card__feature
+                          span.card__feature-name
+                            | Колесная формула
+                          span.card__feature-value
+                            | 4х2
+                        li.card__feature
+                          span.card__feature-name
+                            | Тип ошинковки
+                          span.card__feature-value
+                            | 2
+                        li.card__feature
+                          span.card__feature-name
+                            | Г/п, т (наг./ССУ)
+                          span.card__feature-value
+                            | 10,82
+                        li.card__feature
+                          span.card__feature-name
+                            | Колесная формула
+                          span.card__feature-value
+                            | 4х2
+                    .card__bottom
+                      .card__price
+                        span
+                          | от 4 500 000 ₽
+                        .card__old-price.product-info__old-price
+                          span.product-info__old-price-value
+                            | от 5 500 000 ₽
+                          .product-info__discount.discount
+                            | –20%  
+                      .card__controls
+                        button.button-primary.button-primary--medium
+                          | Заказать
+                        a.card__link.primary-link(href="#")
+                          +icon-mono('comparison')
+                          span.link-text
+                            | В сравнение
+
+            li.category__item
+              .category__card.card
+                .card__body
+                  .card__image
+                    +pictureLazy('cards/img-1.jpg', 'карточка товара производителя "СпецТехника"')
+                  .card__info
+                    .card__heading
+                      h5.card__title
+                        | КАМАЗ 54901-004-92
+                      ul.card__features
+                        li.card__feature
+                          span.card__feature-name
+                            | Колесная формула
+                          span.card__feature-value
+                            | 4х2
+                        li.card__feature
+                          span.card__feature-name
+                            | Тип ошинковки
+                          span.card__feature-value
+                            | 2
+                        li.card__feature
+                          span.card__feature-name
+                            | Г/п, т (наг./ССУ)
+                          span.card__feature-value
+                            | 10,82
+                        li.card__feature
+                          span.card__feature-name
+                            | Колесная формула
+                          span.card__feature-value
+                            | 4х2
+                        li.card__feature
+                          span.card__feature-name
+                            | Тип ошинковки
+                          span.card__feature-value
+                            | 2
+                        li.card__feature
+                          span.card__feature-name
+                            | Г/п, т (наг./ССУ)
+                          span.card__feature-value
+                            | 10,82
+                        li.card__feature
+                          span.card__feature-name
+                            | Колесная формула
+                          span.card__feature-value
+                            | 4х2
+                    .card__bottom
+                      .card__price
+                        span
+                          | от 4 500 000 ₽
+                        .card__old-price.product-info__old-price
+                          span.product-info__old-price-value
+                            | от 5 500 000 ₽
+                          .product-info__discount.discount
+                            | –20%  
+                      .card__controls
+                        button.button-primary.button-primary--medium
+                          | Заказать
+                        a.card__link.primary-link(href="#")
+                          +icon-mono('comparison')
+                          span.link-text
+                            | В сравнение
+
+          a.category__add-button.button-border-line(href="#")
+            span.default-label
+              | Показать ещё                  

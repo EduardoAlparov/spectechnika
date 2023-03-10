@@ -1,0 +1,38 @@
+.control-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__filter-button {
+    display: none;
+
+    @include mq(lg, max) {
+      display: block;
+    }
+  }
+
+  &__sorting {
+    display: none;
+
+    @include mq(lg, max) {
+      display: block;
+    }
+  }
+
+  &__view-quantity {
+    margin-right: auto;
+
+    @include mq(lg, max) {
+      margin-left: auto;
+      margin-right: unset;
+    }
+  }
+
+  &__view-type {
+    margin-left: 4rem;
+
+    @include mq(lg, max) {
+      display: none;
+    }
+  }
+}

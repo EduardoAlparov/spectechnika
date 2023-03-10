@@ -1,0 +1,10 @@
+extends layout/default.pug
+
+block variables
+  - const bodyClass = "page-configurator"
+  - const headerClass = "header header--simple"
+  - const pageTitle = "Конфигуратор"
+  - const siteLang = "ru"
+
+block content
+  include pages/configurator/main.pug

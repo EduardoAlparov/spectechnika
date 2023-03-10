@@ -1,0 +1,125 @@
+.primary-link {
+  --line-height: 1.39;
+
+  position: relative;
+  line-height: var(--line-height);
+  height: calc(var(--line-height) * 1em);
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: var(--color-white);
+  will-change: color;
+
+  .icon {
+    max-height: 100%;
+    max-width: 2.4rem;
+    min-width: 2.4rem;
+  }
+
+  .icon-cat {
+    fill: none;
+    stroke: var(--color-white);
+  }
+
+  .link-text {
+    position: relative;
+    white-space: nowrap;
+    transition: color 0s;
+  }
+
+  .label-text {
+    position: absolute;
+    top: 100%;
+
+    width: 100%;
+
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 139%;
+    letter-spacing: -0.02em;
+    color: #E4E4E4;
+    opacity: 0.4;
+  }
+
+  span::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    width: 0%;
+    height: 1px;
+
+    background-color: var(--color-white);
+    transition: var(--transition);
+  }
+
+  @include hover {
+    .link-text::after {
+      width: 100%;
+    }
+  }
+
+  &--with-icon {
+    .link-text::after {
+      content: none;
+    }
+
+    @include hover {
+      color: var(--color-white);
+      .icon-cat {
+        stroke: var(--color-white);
+      }
+
+      .icon-cat {
+        stroke: var(--color-grayscale-900);
+      }
+    }
+  }
+
+  &--large {
+    font-size: 4.4rem;
+    --line-height: 1;
+
+    @include mq(xl, max) {
+      font-size: 28px;
+
+      .label-text {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.header--simple {
+  .primary-link {
+    --line-height: 1.56;
+    line-height: var(--line-height);
+    font-size: 16px;
+    color: var(--color-grayscale-900);
+
+    .icon-cat {
+      stroke: var(--color-grayscale-900);
+    }
+
+    .link-text::after {
+      background-color: var(--color-grayscale-900);
+    }
+  }
+
+  .site-controls__link--catalog {
+    @include mq(sm, max) {
+      padding: 11px 24px;
+      font-size: 1.4rem;
+      line-height: 110%;
+    }
+
+    @include mq(custom, max, 340) {
+      padding: 11px 12px;
+    }
+  }
+}

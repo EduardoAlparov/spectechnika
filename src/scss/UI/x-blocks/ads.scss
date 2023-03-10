@@ -1,0 +1,64 @@
+.ads {
+  margin-top: 12.7rem;
+
+  @include mq(md, max) {
+    margin-top: 52px;
+  }
+
+  &__body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    @include mq(lg, max) {
+      gap: 20px;
+    }
+  }
+
+  &__head {
+    max-width: 75%;
+    flex-basis: 75%;
+    display: flex;
+    gap: 2.8rem;
+
+    @include mq(sm, max) {
+      gap: 8px;
+    }
+  }
+
+  &__button-wrapper {
+    position: relative;
+  }
+
+  &__button {
+    padding-right: 2rem;
+
+    @include mq(sm, max) {
+      font-weight: 400;
+    }
+  }
+
+  &__counter {
+    position: absolute;
+    left: calc(100% - 1rem);
+    top: -.3rem;
+    color: inherit;
+
+
+    @include mq(lg, max) {
+      left: calc(100% - 17px);
+      font-size: 1.2rem;
+    }
+
+    @include mq(sm, max) {
+      font-size: 12px;
+    }
+  }
+
+  &__slider {
+    &--hidden {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+form.form(action="")
+  .site-container
+    .form__body
+      .form__heading
+        h3.form__title.h3-text
+          | Оставьте&nbsp;заявку и получите&nbsp;подарок!
+        .form__text
+          | Если отправите заявку в течении 5 мин, при покупке получите подарок.
+
+      .form__controls
+        .form__inputs
+          .form__input-wrapper
+            input.form__input.input.js-input-mask_text(
+              type="text",
+              placeholder="Ваше имя",
+              name="name"
+              autocomplete="false"
+              required
+            )
+          .form__input-wrapper
+            input.form__input.input.js-input-mask_phone(
+              type="text",
+              placeholder="Телефон",
+              name="phone"
+              required
+            )
+        .form__submit
+          button.button-primary.button-primary--large.button-primary--light(type="submit")
+            | Оставить заявку
+          .form__submit-text
+            span
+              | Нажимая кнопку “Оставить заявку” вы соглашаетесь с&nbsp;
+            a(href="")
+              |политикой конфиденциальности

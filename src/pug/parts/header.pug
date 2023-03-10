@@ -1,0 +1,77 @@
+- const controls = {'Каталог': 'cat', 'Сравнение': 'compare', 'Поиск': 'search'}
+- const navLinks = {'Наши партнеры': './page-our-partners.html','О нас': './page-about-company.html', 'Контакты': './page-contacts.html', 'Лизинг': './page-leasing.html', 'Услуги': './page-services.html', 'Видеообзоры': './page-video-reviews.html'}
+
+header.header(class=headerClass)
+  .site-container
+    .header__body
+      .header__cell.header__site-controls
+        .site-controls
+          ul.site-controls__list
+            li.site-controls__item
+              a.site-controls__link.site-controls__link--catalog.primary-link(
+                data-path="cat-popup",
+                href="#"
+              )
+                +icon-mono('cat')
+                +icon-multi('closing')
+                span.link-text
+                  | Каталог
+              .modal
+                include ../parts/modals/cat-popup.pug  
+
+            li.site-controls__item
+              a.site-controls__link.site-controls__link--compare.primary-link(href="#")
+                +icon-mono('compare')
+                span.link-text
+                  | Сравнение
+
+            li.site-controls__item
+              a.site-controls__link.site-controls__link--search.primary-link(
+                data-path="search-popup",
+                href="#"
+              )
+                +icon-mono('search')
+                span.link-text
+                  | Поиск
+
+              .modal.modal--search
+                include ../parts/modals/search-popup.pug      
+   
+      .header__cell.header__nav
+        nav.nav
+          ul.nav__list
+            each url, title in navLinks
+              li.nav__item
+                a.nav__link.primary-link(href=url)
+                  span.link-text= title
+
+        button.button-nav(
+          data-path="nav-popup"
+        )
+          +icon-mono('menu-burger')
+          +icon-multi('closing')
+      
+      .modal
+        include ../parts/modals/nav-popup.pug
+
+      .header__cell.header__phone
+        a.primary-link(href="tel:88005505812")
+          span.link-text
+            | 8 800 550 58 12
+
+      .header__cell.header__logo
+        a.logo(href="/")
+          .logo__img
+            img(src="./assets/images/logo.png", alt="")
+          .logo__span
+            | Спецтехника
+
+        .header__text
+          +icon-mono('logo-text')
+
+      .header__cell.header__button
+        button.button-primary(
+          data-path="gift-request-modal",
+          type="button"
+        )
+          | Заказать

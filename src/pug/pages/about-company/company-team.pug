@@ -1,0 +1,25 @@
+-
+  companyTeam__list = ["Сортиментовозы", "Самосвалы", "Бортовые автомобили с любым манипулятором", "Металловозы", "Авто топливо заправщики", "Авто цистерны под любые продукты", "и др."]
+
+section.section.company-team
+  .site-container
+    .cat-layout__container.company-team__heading
+      .cat-layout__sidebar
+        .company-team__text
+          | Команда наших специалистов собрана из людей с богатым опытом в работе с техникой КамАЗ.
+      .cat-layout__main
+        .company-team__desc.h4-text
+          | Наша компания без преувеличения является самой лояльной и с индивидуальным подходом к каждому клиенту.
+    .company-team__img-wrapper
+      img.company-team__img-logo(src="assets/images/company-team/logo-kamaz.png" alt="Kamaz")
+      +imgLazy("assets/images/company-team/bg-img.jpg")(class="company-team__img")
+    .cat-layout__container
+      .cat-layout__sidebar
+        .company-team__text
+          | Мы всегда рады видеть наших клиентов и делать все, чтобы их жизнь стала лучше и проще.
+      .cat-layout__main
+        .company-team__desc.h4-text
+          | В #[span= "кратчайшие сроки"] мы готовы согласовать и изготовить спецтехнику с любыми вашими пожеланиями такую как:
+        ul.company-team__list
+          each item in companyTeam__list
+            li.company-team__list-item.h4-text= item

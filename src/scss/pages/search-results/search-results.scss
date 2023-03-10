@@ -1,0 +1,54 @@
+.search-results {
+  padding: 4.5rem 0 14rem;
+
+  @include mq(lg, max) {
+    padding: 22px 0 40px;
+  }
+
+  &__body {
+    padding-top: 7.8rem;
+
+    @include mq(lg, max) {
+      padding-top: 30px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 10.5rem;
+
+    @include mq(lg, max) {
+      margin-bottom: 5rem;
+    }
+  }
+
+
+  &__title {
+    font-size: 16.8rem;
+    letter-spacing: -0.04em;
+    margin-left: unset;
+
+    @include mq(xl, max) {
+      font-size: 8rem;
+    }
+  
+    @include mq(lg, max) {
+      font-size: 6.4rem;
+    }
+  
+    @include mq(md, max) {
+      font-size: 5rem;
+    }
+  
+    @include mq(sm, max) {
+      font-size: 36px;
+    }
+  }
+
+  &__request  {
+    margin-top: 1.2rem;
+
+    @include mq(md, max) {
+      font-size: 14px;
+    }
+  }
+}

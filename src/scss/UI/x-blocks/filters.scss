@@ -1,0 +1,133 @@
+.filters {
+  $this: &;
+
+  @include mq(lg, max) {
+    position: relative;
+    z-index: 100;
+		height: 100%;
+		padding: 30px 15px;
+		background-color: var(--color-white);
+		border-radius: 12px;
+  }
+
+  @include mq(sm, max) {
+    padding: 30px 15px 20px 15px;
+  }
+
+  &__body,
+  &__selection,
+  &__selections,
+  &__checkboxes {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__head {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    @include mq(lg, max) {
+      display: flex;
+    }
+  }
+
+  &__head-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+  }
+
+  &__clear-button {
+    font-size: 16px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    color: var(--color-grayscale-700);
+    transition: var(--transition);
+
+    &:active {
+      color: var(--color-grayscale-900);
+    }
+  }
+
+  &__body {
+    gap: 6.6rem;
+
+    @include mq(lg, max) {
+      position: relative;
+      overflow: auto;
+      height: 100%;
+      min-height: 100%;
+			gap: 32px;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  &__selections {
+    gap: 2.7rem;
+
+    @include mq(md, max) {
+      gap: 32px;
+    }
+  }
+
+  &__selection {
+    gap: 1rem;
+
+    &--main {
+      gap: 2.4rem;
+
+      #{$this}__title{
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 110%;
+        letter-spacing: -0.02em;
+        color: var(--color-black);
+
+        @include mq(md, max) {
+          font-size: 16px;
+        }
+      }
+
+      @include mq(md, max) {
+        gap: 12px;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+
+    @include mq(md, max) {
+      font-size: 16px;
+    }
+  }
+
+  &__checkboxes {
+    gap: 3rem;
+
+    @include mq(md, max) {
+      gap: 20px;
+    }
+  }
+
+  &__close-btn {
+		position: absolute;
+		top: -45px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		.icon {
+			width: 30px;
+			height: 30px;
+			fill: var(--color-white);
+			stroke: var(--color-white);
+		}
+	}
+}

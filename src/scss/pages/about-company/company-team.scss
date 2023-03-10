@@ -1,0 +1,156 @@
+.company-team{
+  &__img-wrapper{
+    width: 100%;
+    position: relative;
+    padding-bottom: 34%;
+    border-radius: 0.8rem;
+    overflow: hidden;
+
+    @include mq(lg) {
+      padding-bottom: 56%;
+    }
+
+    @include mq(xs) {
+      padding-bottom: 96%;
+    }
+  }
+
+  &__img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+
+    @include mq(sm) {
+      object-fit: cover;
+      object-position: 92%;
+    }
+  }
+
+  &__img-logo{
+    position: absolute;
+    z-index: 3;
+    left: 4rem;
+    bottom: 4rem;
+    width: 22rem;
+    height: 22rem;
+
+    @include mq(xl) {
+      width: 19rem;
+      height: 19rem;
+    }
+
+    @include mq(lg) {
+      width: 17rem;
+      height: 17rem;
+      left: 3rem;
+      bottom: 3rem;
+    }
+
+    @include mq(sm) {
+      width: 15rem;
+      height: 15rem;
+    }
+
+    @include mq(xs) {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @include mq(xxs){
+      width: 11rem;
+      height: 11rem;
+    }
+  }
+
+  .cat-layout__container{
+    padding: 14rem 0 16rem;
+
+    @include mq(xl) {
+      padding: 12rem 0 14rem;
+    }
+
+    @include mq(lg) {
+      padding: 8rem 0 9rem;
+    }
+
+    @include mq(lg) {
+      padding: 4rem 0 4rem;
+    }
+
+    @include mq(sm) {
+      gap: 30px;
+      padding: 2rem 0 4rem;
+    }
+  }
+
+  &__heading {
+    @include mq(sm) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__text{
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 1.1;
+    max-width: 32rem;
+    color: rgba(245, 245, 246, 0.3);
+
+    @include mq(md) {
+      font-size: 2.1rem;
+    }
+
+    @include mq(sm) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__desc{
+    max-width: 105rem;
+
+    span {
+      background-color: var(--color-primary-500);
+      border-radius: 0.5rem;
+      padding: 0 0.3rem;
+      margin: 0 0.7rem;
+    }
+  }
+
+  &__list{
+
+  }
+
+  &__list-item{
+    padding-left: 7rem;
+    margin-bottom: 1rem;
+    position: relative;
+
+    @include mq(md) {
+      padding-left: 4rem;
+    }
+
+    &::before{
+      content: '';
+      position: absolute;
+      background-color: var(--color-grayscale-100);
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      left: 3rem;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @include mq(md) {
+        width: 0.6rem;
+        height: 0.6rem;
+        left: 1.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.button-slider-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  line-height: 100%;
+
+  &--dark {
+    button {
+      background-color: var(--color-grayscale-900);
+      border-color: var(--color-grayscale-900);
+
+      .icon {
+        stroke: var(--color-white);
+      }
+
+      @include hover {
+        background-color: var(--color-grey-900);
+
+        .icon {
+          stroke: var(--color-white);
+        }
+      }
+    }
+  }
+}
+
+.button-slider {
+  width: 6rem;
+  height: 6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--color-white);
+  border-radius: 100%;
+
+  transition: var(--transition);
+
+  &--left {
+    .icon {
+      padding-right: .5rem;
+    }
+  }
+
+  &--rigth {
+    .icon {
+      padding-left: .5rem;
+    }
+  }
+
+  .icon {
+    width: 20px;
+    height: 30px;
+
+    fill: none;
+    stroke: var(--color-white);
+    transition: var(--transition);
+  }
+
+  &:disabled {
+    border-color: rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+  }
+
+  @include hover {
+    background-color: var(--color-white);
+    border-color: transparent;
+
+    .icon {
+      stroke: var(--color-primary-900);
+    }
+  }
+
+  &--dark {
+    border-color: var(--color-grayscale-900);
+
+    .icon {
+      width: 20px;
+      height: 30px;
+
+      stroke:  var(--color-grayscale-900);
+    }
+
+    @include hover {
+      background-color: var(--color-grayscale-900);
+      border-color: transparent;
+
+      .icon {
+        stroke: var(--color-white);
+      }
+    }
+
+    &:disabled {
+      border-color: rgba(22, 22, 23, 0.2);
+      pointer-events: none;
+    }
+  }
+}

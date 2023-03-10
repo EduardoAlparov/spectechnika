@@ -1,0 +1,104 @@
+.button-secondary {
+  $component: &;
+  --line-height: 1.39;
+  line-height: var(--line-height);
+
+  height: calc(var(--line-height) * 1em);
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-weight: 400;
+  font-size: 1.8rem;
+
+  border: 1px solid var(--color-grayscale-900);
+  border-radius: 4px;
+
+  color: var(--color-grayscale-900);
+  transition: var(--transition);
+
+  .icon {
+    max-height: 100%;
+    max-width: 2.8rem;
+    min-width: 2.4rem;
+  }
+
+  .icon-cat {
+    fill: none;
+    stroke: var(--color-white);
+    stroke-width: 0.15rem;
+    transition: var(--transition);
+  }
+
+  .icon-compare {
+    stroke-width: 0.15rem;
+  }
+
+  span {
+    display: block;
+    white-space: nowrap;
+  }
+
+  &--light {
+    color: var(--color-grayscale-900);
+
+    @include hover {
+      color: var(--color-grayscale-900);
+
+      .icon-cat {
+        stroke: var(--color-grayscale-900);
+      }
+    }
+  }
+
+  &--small {
+    padding: 0;
+
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 110%;
+
+    .icon {
+      max-height: 100%;
+      max-width: 16px;
+    }
+  }
+
+
+
+  &--non-border {
+    border-color: transparent;
+
+    .icon {
+      max-height: 100%;
+      max-width: 20px;
+    }
+
+    @include hover {
+      border-color: var(--color-grayscale-900);
+    }
+  }
+}
+
+.header--simple {
+  .button-secondary--light {
+    color: var(--color-grayscale-900);
+
+    .icon-cat {
+      stroke: var(--color-grayscale-900);
+    }
+
+    @include hover {
+      border-color: var(--color-grayscale-900);
+    }
+  }
+
+  .button-secondary--non-border {
+    border-color: transparent;
+
+    @include hover {
+      border-color: var(--color-grayscale-900);
+    }
+  }
+}

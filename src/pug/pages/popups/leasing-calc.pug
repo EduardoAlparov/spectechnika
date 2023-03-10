@@ -1,0 +1,39 @@
+form.leasing-calc(actions="")
+  .site-container
+    .leasing-calc__body
+      .leasing-calc__col.leasing-calc__col--big
+        .leasing-calc__heading
+          h3.leasing-calc__title.form__title.h3-text
+            | Расчитать&nbsp;лизинг
+          .leasing-calc__text.form__text
+            | Если отправите заявку в течении 5 мин, при покупке получите подарок.
+
+        .leasing-calc__inputs
+          .leasing-calc__input.leasing-calc__input--cost
+            +Range("Стоимость", "₽", 'cost', "100000", "3500000", false)
+          .leasing-calc__input.leasing-calc__input--prepayment
+            +Range("Аванс", "₽", 'prepayment', "10000", "3500000", true)
+          .leasing-calc__input.leasing-calc__input--term
+            +Range("Срок", "мес", 'term', "12", "36", false)
+
+
+      .leasing-calc__col
+        .leasing-calc__submit.submit-calc
+
+          .submit-calc__head
+            .submit-calc__text
+              | Ежемесячный платёж
+
+            .submit-calc__monthly-payment.h4-text
+              span.submit-calc__payment-value
+                | 0
+              span.submit-calc__price-currency
+                | ₽
+
+          .submit-calc__bottom
+            button.submit-calc__button.button-primary.button-primary--black.button-primary--large(type="submit")
+              | Получить расчет
+
+            .submit-calc__footnote
+              | * Данный расчет примерный, точную информацию о лизинге узнавайте
+              | у консультантов

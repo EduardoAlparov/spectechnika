@@ -1,0 +1,74 @@
+.view-type {
+  &__body {
+    padding: 2.5px;
+
+    width: 116px;
+    height: 44px;
+    display: flex;
+
+    background-color: var(--color-grayscale-200);
+    border-radius: 50px;
+  }
+
+  &__button {
+    width: 56px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+
+    .icon {
+      width: 2.4rem;
+      height: 2.4rem;
+
+      stroke: var(--color-grayscale-400);
+      transition: var(--transition);
+    }
+
+    &:hover {
+      box-shadow: -3px 1px 8px rgba(0, 0, 0, 0.05);
+
+      .icon {
+        stroke: var(--color-grayscale-900);
+      }
+    }
+  }
+
+  #view-type-list {
+    &:checked {
+      ~ .view-type__body {
+        .view-type__button--bullets {
+          background-color: #FFFFFF;
+          box-shadow: -3px 1px 8px rgba(0, 0, 0, 0.05);
+          pointer-events: none;
+
+          .icon {
+            stroke: var(--color-grayscale-900);
+          }
+        }
+      }
+    }
+  }
+
+  #view-type-grid {
+    &:checked {
+      ~ .view-type__body {
+        .view-type__button--grid {
+          background-color: #FFFFFF;
+          box-shadow: -3px 1px 8px rgba(0, 0, 0, 0.05);
+          pointer-events: none;
+
+          .icon {
+            stroke: var(--color-grayscale-900);
+          }
+        }
+      }
+
+    }
+  }
+}

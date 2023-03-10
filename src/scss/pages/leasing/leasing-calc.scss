@@ -1,0 +1,87 @@
+.leasing-calc {
+  position: relative;
+  padding: 10rem 0 12rem;
+  background-color: var(--color-primary-500);
+  color: var(--color-white);
+
+  @include mq(md, max) {
+    padding: 48px 0;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-image: url('../../assets/images/advant/pattern.svg');
+    background-position: right top;
+    background-repeat: space;
+    z-index: 1;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 12.4rem;
+
+    @include mq(lg, max) {
+      width: 100%;
+      flex-direction: column;
+      gap: 35px;
+    }
+  }
+
+  &__col {
+    &--big {
+      flex-grow: 1;
+    }
+
+    @include mq(lg, max) {
+      width: 100%;
+      max-width: 70%;
+    }
+
+    @include mq(sm, max) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__heading {
+    @include mq(custom, max, 1600) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__text {
+    @include mq(lg, max) {
+      max-width: 100%;
+    }
+  }
+
+  &__inputs {
+    max-width: 70rem;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+
+    @include mq(lg, max) {
+      max-width: 100%;
+    }
+  }
+
+  &__submit {
+    max-width: max-content;
+
+    @include mq(lg, max) {
+      max-width: unset;
+    }
+  }
+}

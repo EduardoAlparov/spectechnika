@@ -1,0 +1,87 @@
+.cat-layout {
+  padding: 4.5rem 0 14rem;
+  background-color: var(--color-white);
+
+  @include mq(sm, max) {
+    padding: 24px 0 47px;
+  }
+
+  &--animated {
+    padding: 7rem 0 14rem;
+
+    .cat-layout__title {
+      clip-path: inset(0 100% 0 0);
+      -webkit-clip-path: inset(0 100% 0 0);
+
+      transition: 1s ease-out 0.5s;
+    }
+
+    &._animate {
+      .cat-layout__title {
+        clip-path: inset(0 0 0 0);
+        -webkit-clip-path: inset(0 0 0 0);
+      }
+    }
+
+    @include mq(sm, max) {
+      padding: 24px 0 47px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 3.8rem;
+
+    @include mq(sm, max) {
+      gap: 15px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    gap: 3rem;
+
+    @include mq(lg, max) {
+      flex-direction: column;
+      gap: 6rem;
+    }
+
+    @include mq(sm, max) {
+      gap: 48px;
+    }
+  }
+
+  &__sidebar {
+    flex-basis: calc(25% - 3rem);
+  }
+
+  &__main {
+    flex-basis: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    @include mq(lg, max) {
+      flex-basis: auto;
+      gap: 2rem;
+    }
+
+    @include mq(sm, max) {
+      gap: 16px;
+    }
+  }
+
+  &__head {
+    display: flex;
+    gap: 2.8rem;
+  }
+
+  &__button-wrapper {
+    position: relative;
+  }
+
+  &__button {
+    padding-right: 20px;
+  }
+}

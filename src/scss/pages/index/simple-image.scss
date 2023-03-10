@@ -1,0 +1,27 @@
+.simple-image {
+  width: 100%;
+  height: 28vw;
+
+  @include mq(md, max) {
+    height: 36vw;
+  }
+
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+
+    height: 100%;
+
+    img {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+
+      max-width: 100%;
+      min-width: 100%;
+      object-position: center;
+    }
+  }
+}

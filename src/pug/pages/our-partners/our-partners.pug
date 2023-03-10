@@ -1,0 +1,38 @@
+-
+  ourPartners__list = [
+    {"imgUrl": "assets/images/our-partners/1.jpg", "imgAlt": "Документ", "title": "ООО ТФК «ФЕНИКС»", "text": "Продажа и изготовление различной высококачественной спецтехники и запчастей к ней.", "logoUrl": "assets/images/our-partners/logo1.png", "logoAlt": "Логотип компании"},
+    {"imgUrl": "assets/images/our-partners/2.jpg", "imgAlt": "Документ", "title": "ООО ТФК «ФЕНИКС»", "text": "ООО ГК «Коммерческие грузовики»", "logoUrl": "assets/images/our-partners/logo2.png", "logoAlt": "Логотип компании"},
+    {"imgUrl": "assets/images/our-partners/3.jpg", "imgAlt": "Документ", "title": "ООО ТФК «ФЕНИКС»", "text": "ООО ТФК «ФЕНИКС»", "logoUrl": "assets/images/our-partners/logo1.png", "logoAlt": "Логотип компании"},
+    {"imgUrl": "assets/images/our-partners/4.jpg", "imgAlt": "Документ", "title": "ООО ТФК «ФЕНИКС»", "text": "ООО «МегаТрон»", "logoUrl": "assets/images/our-partners/logo3.png", "logoAlt": "Логотип компании"},
+    {"imgUrl": "assets/images/our-partners/1.jpg", "imgAlt": "Документ", "title": "ООО ТФК «ФЕНИКС»", "text": "Продажа и изготовление различной высококачественной спецтехники и запчастей к ней.", "logoUrl": "assets/images/our-partners/logo1.png", "logoAlt": "Логотип компании"},
+    {"imgUrl": "assets/images/our-partners/2.jpg", "imgAlt": "Документ", "title": "ООО ТФК «ФЕНИКС»", "text": "ООО ГК «Коммерческие грузовики»", "logoUrl": "assets/images/our-partners/logo2.png", "logoAlt": "Логотип компании"},
+    {"imgUrl": "assets/images/our-partners/3.jpg", "imgAlt": "Документ", "title": "ООО ТФК «ФЕНИКС»", "text": "ООО ТФК «ФЕНИКС»", "logoUrl": "assets/images/our-partners/logo1.png", "logoAlt": "Логотип компании"},
+    {"imgUrl": "assets/images/our-partners/4.jpg", "imgAlt": "Документ", "title": "ООО ТФК «ФЕНИКС»", "text": "ООО «МегаТрон»", "logoUrl": "assets/images/our-partners/logo3.png", "logoAlt": "Логотип компании"}
+  ]
+
+section.section.our-partners.cat-layout
+  .site-container
+    .section__breadcrumbs.breadcrumbs
+      ul.breadcrumbs__list
+        li.breadcrumbs__item
+          a( href="/" ).breadcrumbs__link
+            | Главная
+        li.breadcrumbs__item
+          a( href="#" ).breadcrumbs__link.breadcrumbs__link--active
+            | Наши партнеры
+    h1.our-partners__title.h1-text.h1-text--small
+      | Наши партнеры
+    ul.our-partners__list
+      each item in ourPartners__list
+        li.our-partners__list-item
+          .our-partners__list-item-img-box
+            +imgLazy(item.imgUrl, item.imgAlt).our-partners__list-item-img
+          .our-partners__list-item-info
+            span.our-partners__list-item-info-title= item.title
+            p.our-partners__list-item-info-text= item.text
+            img.our-partners__list-item-info-img(src=item.logoUrl alt=item.logoAlt)
+
+    a.button-border-line.js-list-toggle-btn(href="#")
+        span.default-label
+          | Показать ещё
+

@@ -1,0 +1,14 @@
+.catalog {
+  &__body {
+    margin-top: -1.7rem;
+
+    @include mq(xl, max) {
+      padding-top: 3.4rem;
+    }
+
+    @include mq(sm, max) {
+      margin-top: 0;
+      padding-top: 34px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.button-play {
+  position: relative;
+
+  width: 7.2rem;
+  height: 7.2rem;
+
+  background: var(--color-primary-500);
+  border-radius: 100px;
+
+  transition: background-color var(--transition);
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%, -50%);
+    z-index: 1;
+
+    width: 2.2rem;
+    height: 2.4rem;
+
+    fill: var(--color-white);
+
+    @include mq(md, max) {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @include hover {
+    background-color: var(--color-primary-900);
+  }
+
+  @include mq(md, max) {
+    width: 48px;
+    height: 48px;
+  }
+}

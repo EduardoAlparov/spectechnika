@@ -1,0 +1,38 @@
+include ../data/config.pug
+include ../mixins/**/*.pug
+
+block variables
+
+doctype html
+html(lang=siteLang)
+  head
+    include ../parts/head.pug
+  body(class=bodyClass)
+    .page-wrapper
+      block header(class=headerClass)
+        include ../parts/header.pug
+
+      block content
+
+      block footer
+        include ../parts/footer.pug
+        
+    .modal
+      include ../parts/modals/callback-modal.pug
+
+    .modal
+      include ../parts/modals/gift-request-modal.pug
+
+    .modal
+      include ../parts/modals/product-request-modal.pug
+
+    .modal.js-popup-success
+      include ../parts/modals/success-popup.pug
+
+    .modal.js-popup-error
+      include ../parts/modals/error-popup.pug
+
+
+  block scripts
+    script(defer, src="assets/js/main.js?v=" + siteVersion)
+    script(defer, src="assets/js/backend.js?v=" + siteVersion)

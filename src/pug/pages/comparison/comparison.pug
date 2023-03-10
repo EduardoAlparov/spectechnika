@@ -1,0 +1,128 @@
+section.section.comparison
+  .comparison-fixed.js-comparison-fixed
+    .site-container
+      .comparison__top.js-comparison-fixed-parent
+        .comparison__top-down-row
+          a.comparison__top-down(href="#")
+            +icon-mono("download")(class="comparison__top-down-icon" width="24" height="24")
+            span.comparison__top-down-text
+              | Скачать сравнение моделей
+        .comparison-fixed__swiper-wrapper
+          .comparison-fixed__swiper.swiper.js-comparison-fixed__swiper
+            ul.swiper-wrapper
+              each q in Array.from(Array(6).keys())
+                li.swiper-slide
+                  .card-small
+                    .card-small__wrapper
+                      +pictureLazy('cards/img-1.jpg', 'карточка товара производителя "СпецТехника"')(class="card-small__img")
+                      .card-small__info
+                        .card-small__info-title
+                          | КАМАЗ 54901-004-92 #{q}
+                        .card-small__info-price
+                          | от 5 500 000 ₽
+          .comparison__top-swiper-navigation
+            button.comparison__top-swiper-navigation-right.next-2
+             +icon-mono('arrow-r-blue')(width="26px" height="15px")
+  .site-container
+    .section__breadcrumbs.breadcrumbs
+      ul.breadcrumbs__list
+        li.breadcrumbs__item
+          a( href="/" ).breadcrumbs__link
+            | Главная
+        li.breadcrumbs__item
+          a( href="#" ).breadcrumbs__link.breadcrumbs__link--active
+            | Сравнение
+    .comparison__title.h1-text.h1-text--small
+      | Сравнение моделей
+    .comparison__top
+      .comparison__top-down-row
+        a.comparison__top-down(href="#")
+          +icon-mono("download")(class="comparison__top-down-icon" width="24" height="24")
+          span.comparison__top-down-text
+            | Скачать сравнение моделей
+      .comparison__top-swiper-row
+        .comparison__top-swiper.swiper.js-comparison__top-swiper
+          ul.swiper-wrapper
+            each i in Array.from(Array(6).keys())
+              li.swiper-slide
+                .card
+                  .card__body
+                    .card__image
+                      +pictureLazy('cards/img-1.jpg', 'карточка товара производителя "СпецТехника"')
+                    .card__info
+                      .card__heading
+                        h5.card__title
+                          | КАМАЗ 54901-004-92 #{i}
+                      .card__bottom
+                        .card__price
+                          span
+                            | от 5 500 000 ₽
+                        .card__controls
+                          button.button-primary.button-primary--medium
+                            | Заказать
+                          a.card__link.primary-link(href="#")
+                            +icon-mono('comparison')
+                            span.link-text
+                              | В сравнение
+          .comparison__top-swiper-navigation
+            button.comparison__top-swiper-navigation-left.next-3
+              +icon-mono('arrow-r-blue')(width="26px" height="15px")
+            button.comparison__top-swiper-navigation-right.next-1
+             +icon-mono('arrow-r-blue')(width="26px" height="15px")
+    ul.comparison__list
+      il.comparison__row
+        .accordion.js-accordion.active
+          button.accordion__head.js-accordion-btn(type="button")
+            span.accordion__head-text
+              | Основные параметры
+            +icon-mono("arrow-down")(class="accordion__head-icon" width="10px" height="6px")
+          .accordion__body.js-accordion-content
+            each j in Array.from(Array(6).keys())
+              .comparison-table
+                span.comparison-table__text
+                  | Код товара #{j}
+                .comparison-table__swiper-row
+                  .comparison-table__swiper.swiper.js-comparison-table-slider
+                    ul.swiper-wrapper
+                      each k in Array.from(Array(6).keys())
+                        li.swiper-slide.comparison-table__elem
+                          | 45143-6012-50 #{k}
+    ul.comparison__list
+      il.comparison__row
+        .accordion.js-accordion.active
+          button.accordion__head.js-accordion-btn(type="button")
+            span.accordion__head-text
+              | Характеристики шасси
+            +icon-mono("arrow-down")(class="accordion__head-icon" width="10px" height="6px")
+          .accordion__body.js-accordion-content
+            each j in Array.from(Array(6).keys())
+              .comparison-table
+                span.comparison-table__text
+                  | Код товара #{j}
+                .comparison-table__swiper-row
+                  .comparison-table__swiper.swiper.js-comparison-table-slider
+                    ul.swiper-wrapper
+                      each k in Array.from(Array(6).keys())
+                        li.swiper-slide.comparison-table__elem
+                          | Гидравлические выдвижные опоры #{k}
+    ul.comparison__list
+      il.comparison__row
+        .accordion.js-accordion.active
+          button.accordion__head.js-accordion-btn(type="button")
+            span.accordion__head-text
+              | Характеристики КМУ
+            +icon-mono("arrow-down")(class="accordion__head-icon" width="10px" height="6px")
+          .accordion__body.js-accordion-content
+            each j in Array.from(Array(6).keys())
+              .comparison-table
+                span.comparison-table__text
+                  | Бортовая платформа (внутренние размеры), см #{j}
+                .comparison-table__swiper-row
+                  .comparison-table__swiper.swiper.js-comparison-table-slider
+                    ul.swiper-wrapper
+                      each k in Array.from(Array(6).keys())
+                        li.swiper-slide.comparison-table__elem
+                          | 45143-6012-50 #{k}
+
+
+

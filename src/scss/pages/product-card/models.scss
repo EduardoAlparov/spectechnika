@@ -1,0 +1,104 @@
+.models {
+	.card {
+		width: 100%;
+
+		&__body {
+
+			@include mq(sm, max) {
+				max-width: 168px;
+				max-height: 318px;
+				flex-direction: column;
+			}
+		}
+
+		&__image {
+			@include mq(sm, max) {
+				max-width: unset;
+				flex: 0 0 108px;
+				overflow: hidden;
+			}
+		}
+
+		&__info  {
+			@include mq(sm, max) {
+				gap: 15px;
+				flex-direction: column;
+				padding: 15px 10px 15px 10px;
+			}
+		}
+
+		&__heading {
+			@include mq(sm, max) {
+				gap: 15px;
+			}
+		}
+
+		&__title {
+			@include mq(sm, max) {
+				font-size: 16px;
+				max-height: unset;
+				word-break: unset;
+				overflow: unset;
+			}
+		}
+
+		&__features {
+			@include mq(sm, max) {
+				max-height: 60px;
+				gap: 6px;
+			}
+		}
+
+		&__feature {
+			@include mq(sm, max) {
+				gap: 0;
+				flex-direction: column;
+			}
+		}
+
+		&__feature-value {
+			flex: 0 1 30%;
+			text-align: left;
+		}
+
+		.product-info__old-price {
+			display: none;
+		}
+
+		&__controls {
+
+			@include mq(sm, max) {
+				gap: 23px;
+				flex-direction: row;
+				align-items: center;
+				justify-content: start;
+
+				.button-primary {
+					padding: 5px 8px;
+					font-size: 14px;
+				}
+
+				.button-secondary {
+					span  {
+						display: none;
+					}
+				}
+			}
+		}
+
+		&__link {
+			@include mq(sm, max) {
+				.link-text {
+					 display: none;
+				}
+			}
+		}
+
+		&__price {
+			@include mq(sm, max) {
+				font-size: 14px;
+			}
+		}
+		
+	}
+}

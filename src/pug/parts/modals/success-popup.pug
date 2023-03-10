@@ -1,0 +1,14 @@
+.modal__container(data-target="success-popup")
+	.modal__content
+		button.button-reset.modal__close-btn.modal-close(type="button")
+			+icon-mono('delete')
+		.modal__response
+			.modal__status-icon
+				+icon-multi('union')
+			.modal__response-body
+				h4.h4-text
+					| Спасибо за заявку!
+				p 
+					| Наш менеджер свяжется с Вами<br> в&nbsp;ближайшее&nbsp;время!
+			a.modal__link.button-primary.button-primary--medium(href="/")
+				| на главную

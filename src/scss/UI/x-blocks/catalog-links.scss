@@ -1,0 +1,65 @@
+.catalog-links {
+  &__list {
+    max-width: 53rem;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+
+    @include mq(xl, max) {
+      max-width: 42rem;
+      column-gap: 6rem;
+      align-items: center;
+      // min-height: 15rem;
+    }
+
+    @include mq(sm, max) {
+      row-gap: 6px;
+    }
+  }
+
+  &__item {
+    min-width: 34%;
+
+    @include mq(xl, max) {
+      min-width: 25%;
+      max-width: 50%;
+    }
+
+    @include mq(sm, max) {
+
+    }
+  }
+
+  &__link {
+    font-size: 2.4rem;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+
+    &.primary-link {
+      width: unset;
+      }
+
+    @include mq(xl, max) {
+      font-size: 1.6rem;
+      line-height: 110%;
+      height: unset;
+
+      &.primary-link {
+        .link-text{
+          &::after {
+            content: none;
+          }
+        }
+      }
+    }
+
+    @include mq(md, max) {
+      height: 100%;
+      width: 100%;
+    }
+
+    @include mq(xxs, max) {
+      font-size: 16px;
+    }
+  }
+}

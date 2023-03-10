@@ -1,0 +1,17 @@
+-
+  weWorking__items = ["Поступает заявка от клиента", "Менеджер ее обрабатывает, выясняет потребности, подбирает технику, составляет КП", "КП высылается клиенту", "Согласование стоимости и условий", "Покупка"]
+
+section.section.we-working
+  .site-container
+    .we-working__title.h2-text
+      | Как мы работаем
+    .cat-layout__container
+      .cat-layout__main
+        ul.we-working__items
+          each item in weWorking__items
+            li.we-working__item.h4-text= item
+
+
+
+
+

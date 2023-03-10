@@ -1,0 +1,35 @@
+.policy {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  font-size: 1.4rem;
+  line-height: 120%;
+  color: #E4E4E4;
+
+  &__text {
+    opacity: 0.3;
+  }
+
+  &__link {
+    line-height: 110%;
+    font-size: 1.4rem !important;
+
+    @include mq(sm, max) {
+      font-size: 1.2rem !important;
+    }
+
+    @include mq(xxs, max) {
+      font-size: 12px !important;
+    }
+  }
+
+  @include mq(sm, max) {
+    font-size: 1.2rem;
+  }
+
+  @include mq(xxs, max) {
+    font-size: 12px;
+    gap: 6px;
+  }
+}

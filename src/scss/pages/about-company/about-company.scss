@@ -1,0 +1,61 @@
+.about-company{
+  background-image: url('../../assets/images/about-company/KAMAZ_001_1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 86rem;
+  padding-top: 12.3rem;
+
+  @include mq(xl) {
+    padding-top: 11.3rem;
+    min-height: 63rem;
+  }
+
+  @include mq(lg) {
+    padding-top: 10.3rem;
+  }
+
+  @include mq(md) {
+    min-height: 50rem;
+  }
+
+  @include mq(sm) {
+    padding-top: 8.6rem;
+    min-height: 39rem;
+  }
+
+  @include mq(xs) {
+    min-height: 36rem;
+    background-position: 58% 50%
+  }
+
+  &__title{
+    max-width: 87rem;
+    color: var(--color-grayscale-100);
+    padding: 10rem 0 18.8rem;
+
+    @include mq(xl) {
+      padding: 8rem 0 14.8rem;
+    }
+
+    @include mq(lg) {
+      max-width: 51rem;
+      font-size: 4.5rem;
+    }
+
+    @include mq(md) {
+      font-size: 3.2rem;
+    }
+
+    @include mq(sm) {
+      padding: 8rem 0 10rem;
+      max-width: 42rem;
+      font-size: 2.8rem;
+    }
+
+    @include mq(xs) {
+      padding: 2rem 0 8rem;
+    }
+  }
+}

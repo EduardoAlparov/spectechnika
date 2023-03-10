@@ -1,0 +1,28 @@
+.image-slide {
+  width: 25.8rem;
+  height: 36.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--color-grey-300);
+  border-radius: 1.2rem;
+  cursor: pointer;
+
+  &__image {
+    max-height: 16rem;
+    max-width: 90%;
+    display: block;
+    overflow: hidden;
+
+    img {
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  @include mq(md, max) {
+    width: 226px;
+    height: 317px;
+  }
+}

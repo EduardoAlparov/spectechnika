@@ -1,0 +1,17 @@
+-const advantages = {'Широкий ряд техники в наличии': 'assets/images/advant/img-1.png','Индивидуальный подход к каждому клиенту': 'assets/images/advant/img-2.png', 'Гарантия завода изготовителя': 'assets/images/advant/img-3.png', 'Изготовление  спецтехники по любому тех.заданию': 'assets/images/advant/img-4.png', 'Кредит и лизинг': 'assets/images/advant/img-5.png', 'Гарантия лучшей цены': 'assets/images/advant/img-6.png'}
+
+section.advantages#advantages
+  .site-container
+    .advantages__body
+      .advantages__title
+        | “СпецТехника” — дилер ведущих производителей заводов
+        | изготовителей спецтехники на шасси КамАЗ
+      ul.advantages__list
+        each src, text in advantages
+          li.advantages__item
+            .advantages__icon
+              img(src= src, alt="")
+            .advantages__text= text
+
+  .advantages__picture-decore
+    +pictureLazy('advant/decore.png', '')

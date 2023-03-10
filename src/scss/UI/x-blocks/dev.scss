@@ -1,0 +1,60 @@
+.dev {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+
+  color: var(--color-white);
+
+  span {
+    position: relative;
+    top: 100%;
+
+    width: 100%;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #E4E4E4;
+    opacity: 0.3;
+    transition: var(--transition);
+
+    @include mq(sm, max) {
+      font-size: 1.2rem;
+    }
+
+    @include mq(xxs, max) {
+      font-size: 12px;
+    }
+  }
+
+  span::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    width: 0%;
+    height: 1px;
+
+    background-color: var(--color-white);
+    transition: var(--transition);
+  }
+
+  .icon {
+    width: 99px;
+    height: 24.75px;
+  }
+
+  @include hover {
+     span {
+      opacity: 1;
+      color: var(--color-white);
+     }
+
+    span::after {
+      width: 100%;
+    }
+  }
+}

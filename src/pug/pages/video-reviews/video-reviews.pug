@@ -1,0 +1,41 @@
+section.section.video-reviews
+  .site-container
+    .section__breadcrumbs.breadcrumbs
+      ul.breadcrumbs__list
+        li.breadcrumbs__item
+          a( href="/" ).breadcrumbs__link
+            | Главная
+        li.breadcrumbs__item
+          a( href="#" ).breadcrumbs__link.breadcrumbs__link--active
+            | Видеоотзывы
+    .video-reviews__title.h1-text.h1-text--small
+      | Видеообзо&shy;ры
+    .cat-layout__container
+      .cat-layout__main
+        .video-reviews__desc
+          p
+            | Тут может быть текст о Видеообзорах. Конфигуратор спецтехники
+            | поможет подобрать комплектацию автомобиля и проверить
+            | комплектующие на совместимость. Выбирайте, сравнивайте
+            | характеристики, заказывайте дополнительные опции для создания
+            | конфигурации транспортного средства, подходящего для Вас.
+
+        ul.video-reviews__list
+          each i in Array.from(Array(10).keys())
+            li.video-reviews__list-item
+              .slider-layout__item.swiper-slide
+                .link-card
+                  .link-card__body
+                    .link-card__image.link-card__image--video
+                      +pictureLazy('cards/img-4.jpg', 'акции производителя "СпецТехника"')
+                      a.button-play(data-fancybox-plyr href="http://media.w3.org/2010/05/sintel/trailer.mp4")
+                        +icon-mono('play')
+                    .link-card__info
+                      a.link-card__title.link-card__title--white(href="")
+                        | Отзыв о покупке КамАЗа 4308-3083&nbsp;
+                        | рефрижератора
+                      .link-card__text
+                        | Михаил, 44 года
+        a.button-border-line.js-list-toggle-btn(href="#")
+          span.default-label
+            | Показать ещё

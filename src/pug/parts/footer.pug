@@ -1,0 +1,85 @@
+- const catLinks = { 'Тягачи': '', 'Сортиментовозы': '', 'Самосвалы': '', 'Автобетоносмесители': '', 'Бортовые': '', 'Камазы с бортовымими КМУ': '', 'Зерновозы': '', 'Комунально-дорожная техника': '', 'Фургоны': '', 'Автоцистерны': '', 'Автокраны': '' }
+- const navsLinks =  { 'Лизинг': './page-leasing.html', 'Услуги': './page-services.html', 'Видеообзоры': './page-video-reviews.html', 'Наши партнеры': './page-partners.html','О нас': './page-about-company.html', 'Контакты': './page-contacts.html', }
+
+footer.footer
+  .site-container
+    .footer__head
+      .footer__title.h3-text
+        | Мы всегда рады видеть наших клиентов и&nbsp;делать все,
+        | чтобы их жизнь стала лучше&nbsp;и&nbsp;проще!
+
+      .footer__callback
+        a.primary-link.primary-link--large(href="tel:88005505812")
+          span.link-text
+            | 8 800 550 58 12
+          span.label-text
+            | По общим вопросам
+
+        button.button-primary(
+          data-path="callback-modal",
+          type="button"
+        )
+          | обратный звонок
+
+    .footer__bottom
+      .footer__row
+        .footer__col.footer__col--small
+          .footer__about.about
+            .about__name
+              | ООО «СПЕЦТЕХНИКА»
+            .about__address
+              | Российская Федерация, Республика Татарстан,
+              | г. Набережные Челны, Транспортный проезд, 2
+
+        .footer__col.footer__col--large
+          .footer__catalog-links.catalog-links
+            ul.catalog-links__list
+              each url, title in catLinks
+                li.catalog-links__item
+                  a.catalog-links__link.primary-link(href=url)
+                    span.link-text= title
+
+        .footer__col.footer__col--small.footer__col--second
+          nav.footer__nav.nav.nav--vert
+            ul.nav__list
+              each url, title in navsLinks
+                li.nav__item
+                  a.nav__link.nav__link--large.primary-link(href=url)
+                    span.link-text= title
+
+      .footer__row
+
+        .footer__col.footer__col--small.footer__col--second
+          .footer__policy.policy
+            .policy__text
+              | © 2017–2022 Все&nbsp;права&nbsp;защищены
+            a.policy__link.primary-link(href="/")
+              span.link-text
+                | Правовая информация
+
+        .footer__col.footer__col--large
+          .footer__about.about
+              .about__name
+                | ООО «СПЕЦТЕХНИКА»
+              .about__address
+                | Российская Федерация, Республика Татарстан,
+                | г. Набережные Челны, Транспортный проезд, 2
+
+          form.footer__form.line-form
+            .line-form__wrapper
+              label.line-form__label
+                | Подпишитесь и получите<br> подарок за покупку!
+              .line-form__input-wrapper
+                input.line-form__input(type="text", placeholder='Email')
+                button.line-form__button.line-form__button--text.button-primary.button-primary--black(type="submit")
+                  | Подписаться
+
+                button.line-form__button.line-form__button--icon.button-primary.button-primary--black(type="submit")
+                  +icon-mono('form-arrow')
+
+
+        .footer__col.footer__col--small
+          a.footer__dev.dev(href="#")
+            span.dev__span
+              | Сайт разработан
+            +icon-multi('dev-logo')
