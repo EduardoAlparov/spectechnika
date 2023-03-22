@@ -5,6 +5,7 @@ import lazyIMages from './modules/lazyIMages';
 import documenReady from './helpers/documenReady';
 import initModal from './modules/initModal';
 import animationAfterLoad from './modules/animationAfterLoad';
+import showPopupAfterLoad from './modules/showPopupAfterLoad';
 import swiperSlider from './modules/swiperSlider';
 import inputsMasks from './modules/inputsMasks';
 import fancyboxModal from './modules/fancyboxModal';
@@ -30,23 +31,16 @@ import searchbarOpen from './modules/searchbarOpen';
 import adsTabsControl from './modules/adsTabsControl';
 
 documenReady(() => {
-  window.___YOUR_PROJECT___API = {};
+  window.Spectechnika_Api = {};
 
   lazyIMages();
   initModal();
 
-  // carousels:
+  showPopupAfterLoad();
   swiperSlider();
-
-  // animation on load:
   animationAfterLoad();
-
-  // fixd header:
   fixedHeaderOnScroll();
-
-  // input masks:
   inputsMasks();
-
   navMenuOpen();
   catalogMenuControl();
   categoryWrapCount();

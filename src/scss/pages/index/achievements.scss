@@ -165,10 +165,8 @@
 
       .swiper {
         direction: ltr;
-        margin-left: unset;
-        padding-left: unset;
-        margin-right: -100%;
-        padding-right: 100%;
+        margin: 0 -100%;
+        padding: 0 100%;
         overflow: hidden;
       }
 

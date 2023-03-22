@@ -9,9 +9,9 @@
 					.form__titles
 						h3.form__title.h4-text
 							| Заявка<br> на спецтехнику
-					.form__contacts 
+					.form__contacts
 						.nav-popup__phone
-							.nav-popup__label 
+							.nav-popup__label
 								| Отдел продаж
 							a.nav-popup__number.primary-link(href="tel:8 800 550 58 12")
 								span.link-text
@@ -27,6 +27,7 @@
 								placeholder="Ваше имя",
 								name="name"
 								required
+                autocomplete="off"
 							)
 						.form__input-wrapper
 							input.form__input.input.input--dark.js-input-mask_phone(
@@ -34,6 +35,7 @@
 								placeholder="Телефон",
 								name="phone"
 								required
+                autocomplete="off"
 							)
 						.form__input-wrapper
 							input.form__input.input.input--dark.js-input-mask_email(
@@ -41,6 +43,7 @@
 								placeholder="E-mail",
 								name="mail"
 								required
+                autocomplete="off"
 							)
 						.form__input-wrapper.form__input-wrapper--with-label
 							label.form__label
@@ -50,6 +53,7 @@
 								placeholder="КамАЗ 5490-022-87",
 								name="comment"
 								required
+                autocomplete="off"
 							)
 					.form__submit
 						button.button-primary.button-primary--large.js-modal-submit(type="submit")
@@ -59,9 +63,9 @@
 								| Нажимая кнопку “Оставить заявку” вы соглашаетесь с&nbsp;
 							a(href="")
 								|политикой конфиденциальности
-				.form__contacts 
+				.form__contacts
 					.nav-popup__phone
-						.nav-popup__label 
+						.nav-popup__label
 							| Отдел продаж
 						a.nav-popup__number.primary-link(href="tel:8 800 550 58 12")
 							span.link-text

@@ -70,11 +70,16 @@ footer.footer
               label.line-form__label
                 | Подпишитесь и получите<br> подарок за покупку!
               .line-form__input-wrapper
-                input.line-form__input(type="text", placeholder='Email')
+                input.line-form__input(
+                  type="text",
+                  placeholder='Email',
+                  required
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                )
                 button.line-form__button.line-form__button--text.button-primary.button-primary--black(type="submit")
                   | Подписаться
 
-                button.line-form__button.line-form__button--icon.button-primary.button-primary--black(type="submit")
+                button.line-form__button.line-form__button--icon(type="submit")
                   +icon-mono('form-arrow')
 
 

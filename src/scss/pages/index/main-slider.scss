@@ -68,18 +68,18 @@
     }
 
     @include mq(xl, max) {
-      bottom: 3.5rem;
+      top: 2rem;
+      bottom: unset;
     }
 
     @include mq(lg, max) {
-      bottom: 23rem;
 
       .button-slider-wrapper {
         margin-left: auto;
       }
     }
 
-    @include mq(sm, max) {
+    @include mq(md, max) {
       display: none;
     }
   }

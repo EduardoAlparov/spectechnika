@@ -47,9 +47,10 @@ section.section.configurator
               span.configurator__tabs-content-page-title
                 | 1. Выберите тип кузова
               fieldset.configurator__tabs-content-body
-                each bodyItem in configurator__body
+                each bodyItem, i in configurator__body
+                  - var activeChecked = i === 0 ? true : false
                   label.configurator__tabs-content-body-label
-                    input.configurator__tabs-content-body-input.visually-hidden(type="radio" name="body type")
+                    input.configurator__tabs-content-body-input.visually-hidden(type="radio" name="body type" checked=activeChecked)
                     .configurator__tabs-content-body-box
                       img.configurator__tabs-content-body-img(src=bodyItem.imgUrl alt="Тип кузова")
                       span.configurator__tabs-content-body-text= bodyItem.text
@@ -63,9 +64,10 @@ section.section.configurator
                 .configurator__tabs-content-subtitle
                   | Колесная формула
                 fieldset.configurator__tabs-content-contain
-                  each parametersItem in configurator__parameters
+                  each parametersItem, j in configurator__parameters
+                    - var activeChecked = j === 0 ? true : false
                     label.configurator__tabs-content-parameters-label
-                      input.configurator__tabs-content-parameters-input.visually-hidden(type="radio" name="wheel formula")
+                      input.configurator__tabs-content-parameters-input.visually-hidden(type="radio" name="wheel formula" checked=activeChecked)
                       .configurator__tabs-content-parameters-box
                         span.configurator__tabs-content-parameters-text= parametersItem
                 .configurator__tabs-content-selects

@@ -10,6 +10,10 @@
   opacity: 0;
   transition: opacity var(--transition-time), visibility var(--transition-time);
 
+  &--big-index {
+    z-index: 150;
+  }
+
   &.is-open {
     visibility: visible;
     opacity: 1;

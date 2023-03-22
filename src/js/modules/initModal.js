@@ -8,6 +8,8 @@ export default () => {
     },
   });
 
+  window.Spectechnika_Api.modal = modal;
+
   // window.addEventListener('resize', () => {
   //   document.body.classList.remove('disable-scroll');
   //   document.body.classList.remove('disable-scroll--with-menu');

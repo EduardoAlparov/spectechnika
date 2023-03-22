@@ -2,7 +2,7 @@
   .modal__content
     button.button-reset.modal__close-btn.modal-close(type="button")
       +icon-mono('delete')
-      
+
     form.modal__form.form(action="")
       .form__body
         .form__heading
@@ -11,9 +11,9 @@
               | Оставьте&nbsp;заявку и&nbsp;получите&nbsp;подарок
             .form__text
               | Если отправите заявку в течении 5 мин, при покупке получите подарок.
-          .form__contacts 
+          .form__contacts
             .nav-popup__phone
-              .nav-popup__label 
+              .nav-popup__label
                 | Отдел продаж
               a.nav-popup__number.primary-link(href="tel:8 800 550 58 12")
                 span.link-text
@@ -26,6 +26,7 @@
           .form__inputs
             .form__input-wrapper
               input.form__input.input.input--dark.js-input-mask_text(
+                autocomplete="off"
                 type="text",
                 placeholder="Ваше имя",
                 name="name"
@@ -33,6 +34,7 @@
               )
             .form__input-wrapper
               input.form__input.input.input--dark.js-input-mask_phone(
+                autocomplete="off"
                 type="text",
                 placeholder="Телефон",
                 name="phone"
@@ -49,9 +51,9 @@
               a(href="")
                 |политикой конфиденциальности
 
-        .form__contacts 
+        .form__contacts
           .nav-popup__phone
-            .nav-popup__label 
+            .nav-popup__label
               | Отдел продаж
             a.nav-popup__number.primary-link(href="tel:8 800 550 58 12")
               span.link-text

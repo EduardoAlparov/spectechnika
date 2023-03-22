@@ -30,14 +30,6 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
 
-    &:hover {
-      background-color: var(--color-grayscale-400);
-
-      .select__input-text {
-        color: var(--color-accent);
-      }
-    }
-
     &.active {
       color: var(--color-accent);
       border-color: var(--color-accent);

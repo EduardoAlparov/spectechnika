@@ -20,6 +20,7 @@ export class Modal {
       'textarea',
       '[tabindex]'
     ];
+    this.howManyOpened = 0;
     this.events();
   }
 
@@ -85,6 +86,7 @@ export class Modal {
     thisModal.style.setProperty('--transition-time', `${this.speed / 1000}s`);
     thisModal.classList.add('is-open');
     this.disableScroll();
+    this.howManyOpened = this.howManyOpened + 1;
 
     this.modalContainer.classList.add('modal-open');
     this.modalContainer.classList.add(this.animation);
