@@ -2,6 +2,8 @@ export default function onTabsConfigurator() {
   function onTabsConfFunct() {
     const tabsWrapper = document.querySelectorAll('.js-tabs-config');
 
+    console.log("!");
+
     tabsWrapper.forEach(tabs => {
       const contents = tabs.querySelectorAll('.configurator__tabs-content');
       const paginationBtns = tabs.querySelectorAll('.configurator__pagination-item');
@@ -9,6 +11,8 @@ export default function onTabsConfigurator() {
       let itemNum = 0;
 
       contents.forEach((content, k) => {
+
+        if(!content.querySelector('.configurator__tabs-button-next')) return;
 
         const nextBtn = content.querySelector('.configurator__tabs-button-next');
         const prevBtn = content.querySelector('.configurator__tabs-button-prev');

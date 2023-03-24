@@ -19,6 +19,21 @@
       margin-bottom: 0 !important;
     }
   }
+
+  &--bg-white{
+    background-color: var(--color-white);
+    padding: 12rem 0 12rem;
+    margin-bottom: 0 !important;
+
+    @include mq(lg) {
+      padding: 9rem 0 8rem;
+    }
+
+    @include mq(sm) {
+      padding: 6rem 0;
+      margin-bottom: 0 !important;
+    }
+  }
 }
 
 .white-section {

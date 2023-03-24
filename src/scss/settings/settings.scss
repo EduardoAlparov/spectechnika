@@ -280,6 +280,12 @@ a:focus {
     background-color: var(--color-grayscale-900);
   }
 
+  &--white {
+    padding: 10rem 0 18.5rem;
+    color: var(--color-grayscale-900);
+    background-color: var(--color-white);
+  }
+
   &.reviews {
     margin-bottom: 0 !important;
   }

@@ -54,7 +54,7 @@
   &__navigation {
     position: absolute;
     left: 0;
-    bottom: 4rem;
+    top: 20.6rem;
     width: 100%;
 
     opacity: 0;
@@ -68,7 +68,7 @@
     }
 
     @include mq(xl, max) {
-      top: 2rem;
+      top: 15rem;
       bottom: unset;
     }
 

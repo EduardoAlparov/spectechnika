@@ -30,6 +30,68 @@
     }
   }
 
+  &.modal-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 2;
+
+      @include mq(sm) {
+        z-index: 151;
+      }
+    }
+
+    &:after {
+      content: '';
+      width: 6.2rem;
+      height: 6.2rem;
+      background-image: url("data:image/svg+xml,%3Csvg width='62' height='53' viewBox='0 0 62 53' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M62 31C62 25.902 60.7427 20.8827 58.3396 16.3867C55.9364 11.8907 52.4615 8.05673 48.2227 5.22444C43.9839 2.39216 39.112 0.648963 34.0385 0.149274C28.9651 -0.350416 23.8467 0.408822 19.1368 2.35973C14.4269 4.31065 10.2708 7.39302 7.03668 11.3338C3.80255 15.2746 1.59022 19.9522 0.595657 24.9522C-0.39891 29.9522 -0.145016 35.1204 1.33485 39.9988C2.81471 44.8773 5.47487 49.3155 9.07969 52.9203L11.7069 50.2931C8.53416 47.1203 6.19283 43.214 4.89033 38.9203C3.58783 34.6265 3.36437 30.0778 4.23973 25.6771C5.1151 21.2763 7.06227 17.1593 9.90877 13.6909C12.7553 10.2224 16.4132 7.50947 20.5587 5.79238C24.7041 4.07529 29.209 3.40705 33.6744 3.84685C38.1397 4.28665 42.4277 5.82092 46.1585 8.31374C49.8893 10.8066 52.9477 14.181 55.0628 18.1382C57.1779 22.0953 58.2845 26.513 58.2845 31H62Z' fill='%23D9D9D9'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      // top: 50%;
+      // left: 50%;
+      // transform: translate(-50%, -50%);
+      z-index: 3;
+      -webkit-animation: load3 1.4s infinite linear;
+      animation: load3 1.4s infinite linear;
+
+      @include mq(sm) {
+        z-index: 152;
+        transform: translate(-50%, -43%);
+      }
+    }
+  }
+
+  @-webkit-keyframes load3 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes load3 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
   .site-container {
     height: 100%;
   }
