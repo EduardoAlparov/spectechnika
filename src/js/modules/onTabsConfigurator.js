@@ -12,8 +12,6 @@ export default function onTabsConfigurator() {
 
       contents.forEach((content, k) => {
 
-        if(!content.querySelector('.configurator__tabs-button-next')) return;
-
         const nextBtn = content.querySelector('.configurator__tabs-button-next');
         const prevBtn = content.querySelector('.configurator__tabs-button-prev');
 
