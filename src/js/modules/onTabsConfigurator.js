@@ -13,6 +13,9 @@ export default function onTabsConfigurator() {
       contents.forEach((content, k) => {
 
         const nextBtn = content.querySelector('.configurator__tabs-button-next');
+
+        if(!nextBtn) return;
+
         const prevBtn = content.querySelector('.configurator__tabs-button-prev');
 
         nextBtn.addEventListener("click", function () {

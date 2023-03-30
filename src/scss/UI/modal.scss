@@ -387,6 +387,12 @@
 
     .form__submit-text {
       color: var(--color-grayscale-400);
+
+      a {
+          &:hover {
+          color: var(--color-grayscale-900);
+          }
+        }
     }
 
     .form__contacts {
